@@ -1,0 +1,39 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "length": "100",
+    "data": [
+        {
+            "user_id": "1",
+            "user_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_money": "100",
+            "user_sources": "上级发货",
+            "user_time": "2016-12-12",
+            "status": "待审核"
+        },
+        {
+            "user_id": "1",
+            "user_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_money": "100",
+            "user_sources": "上级发货",
+            "user_time": "2016-12-12",
+            "status": "待审核"
+        },
+       {
+            "user_id": "1",
+            "user_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_money": "100",
+            "user_sources": "上级发货",
+            "user_time": "2016-12-12",
+            "status": "待审核"
+        },
+        {
+            "user_id": "1",
+            "user_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_money": "100",
+            "user_sources": "上级发货",
+            "user_time": "2016-12-12",
+            "status": "待审核"
+        }
+    ]
+}

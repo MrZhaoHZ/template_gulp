@@ -1,0 +1,83 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "data": [
+        {
+            "id": 37,
+            "userName": "某某",
+            "orderNo": "2134234345678568",
+            "orderTime": "2016-02-12  14:56:42",
+            "goodsImg": "http://192.168.8.143:3000/temp/img/goods.png",
+            "goodsName": "韩束红石榴洁面乳",
+            "goodsPrice": "24.5",
+            "goodsNum": 5,
+            "priceTotal": "3333"
+        },
+        {
+            "id": 37,
+            "userName": "某某",
+            "orderNo": "2134234345678568",
+            "orderTime": "2016-02-12  14:56:42",
+            "goodsImg": "http://192.168.8.143:3000/temp/img/goods.png",
+            "goodsName": "韩束红石榴洁面乳",
+            "goodsPrice": "24.5",
+            "goodsNum": 5,
+            "priceTotal": "3333"
+        },
+        {
+            "id": 37,
+            "userName": "某某",
+            "orderNo": "2134234345678568",
+            "orderTime": "2016-02-12  14:56:42",
+            "goodsImg": "http://192.168.8.143:3000/temp/img/goods.png",
+            "goodsName": "韩束红石榴洁面乳",
+            "goodsPrice": "24.5",
+            "goodsNum": 5,
+            "priceTotal": "3333"
+        },
+        {
+            "id": 37,
+            "userName": "某某",
+            "orderNo": "2134234345678568",
+            "orderTime": "2016-02-12  14:56:42",
+            "goodsImg": "http://192.168.8.143:3000/temp/img/goods.png",
+            "goodsName": "韩束红石榴洁面乳",
+            "goodsPrice": "24.5",
+            "goodsNum": 5,
+            "priceTotal": "3333"
+        },
+        {
+            "id": 37,
+            "userName": "某某",
+            "orderNo": "2134234345678568",
+            "orderTime": "2016-02-12  14:56:42",
+            "goodsImg": "http://192.168.8.143:3000/temp/img/goods.png",
+            "goodsName": "韩束红石榴洁面乳",
+            "goodsPrice": "24.5",
+            "goodsNum": 5,
+            "priceTotal": "3333"
+        },
+        {
+            "id": 37,
+            "userName": "某某",
+            "orderNo": "2134234345678568",
+            "orderTime": "2016-02-12  14:56:42",
+            "goodsImg": "http://192.168.8.143:3000/temp/img/goods.png",
+            "goodsName": "韩束红石榴洁面乳",
+            "goodsPrice": "24.5",
+            "goodsNum": 5,
+            "priceTotal": "3333"
+        },
+        {
+            "id": 37,
+            "userName": "某某",
+            "orderNo": "2134234345678568",
+            "orderTime": "2016-02-12  14:56:42",
+            "goodsImg": "http://192.168.8.143:3000/temp/img/goods.png",
+            "goodsName": "韩束红石榴洁面乳",
+            "goodsPrice": "24.5",
+            "goodsNum": 5,
+            "priceTotal": "3333"
+        }
+    ]
+}

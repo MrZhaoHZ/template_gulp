@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>在线下单</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<link href="@static_path/libs/layer-mobile/layer.css?v=@version" type="text/css" rel="stylesheet" />
+	<link href="@static_path/libs/html5-time/css/mobiscroll.custom-2.6.2.min.css" rel="stylesheet" type="text/css" />
+	<link href="@static_path/css/order-confirm.css?v=@version" type="text/css" rel="stylesheet" />
+	<style>
+		.disClick{
+		    border:2px dashed #ccc!important;
+		}
+		.sku_info{
+		    background-color: #DDEBCE;
+		    margin: 0.1rem;
+		    margin-bottom: 1.5rem;
+		    padding: 0.3rem 0.2rem;
+		    border-radius: 4px;
+		}
+		nav{
+		   background-color: white;
+		    padding-bottom: 6px;
+		    border-bottom: 1px solid #e8e8e8;
+		    
+		}
+		nav span{
+	        padding: .08rem .15rem;
+	        width: 48%;
+	        display: inline-block;
+	        text-align: center;
+	        color: #999;
+	    }
+	   nav .active{
+	        background: #fff;
+	        color: #66c300;
+	        border: 0px;
+	        border-bottom: 1px solid #66c300;
+	    }
+	    .attr_box{
+	        width: 100%;
+	        overflow: hidden;
+	        border-radius: 4px;
+	        line-height: 30px;
+	        padding: 4px 2px;
+	    }
+	    .attr_left{
+	        float: left;
+	        margin-right: 6px;
+	    }
+	    .attr_right{
+	        float: left;
+	        
+	    }
+	    .attr_right span{
+	        padding: 2px 8px;
+	        border: 1px solid #e8e8e8;
+	        border-radius: 4px;
+	        margin:  0 4px;
+	    }
+	    .spanActive{
+	        color: #66c300;
+	        border: 1px solid #66c300!important;
+	    }
+		.num_box{
+		    overflow: hidden;
+		    position: relative;
+		    height: 45px;
+		    width: 100%;
+		}
+		.submit {
+			position: fixed;
+		    bottom: 0;
+		    width: 100%;
+		    max-width: 750px;
+			margin: 0 0;
+			padding:0.2rem;
+			background: #fff;
+			overflow-y: hidden;
+		}
+		.submit .jine {
+			display: inline-block;
+			line-height: 0.6rem;
+			
+		}
+		.submit .jine i{
+			color: #ff3333;
+			font-style: normal;
+			font-weight: bold;
+		}
+		.submit	span.submit-btn {
+			float: right;
+			padding: 0.15rem 0.3rem;
+			border-radius: 5px;
+			color: #fff;
+			background: #66c300;
+		}
+		.submit	&.gray {
+			background: gray;
+		}
+	</style>
+</head>
+<body>
+	<div class="address" id="address">
+		<!-- <span class="logo"></span>
+		<div class="info">
+			<span>吕晓创</span>
+			<span>15968155124</span>
+			<span>浙江省 杭州市 下城区 东新路111号会号中心</span>
+		</div> -->
+	</div>
+	<div class="goods-price">
+		<span class="jine">我的货款：<i id="avaliable_amount"></i></span>
+		<a class="add" href="../goods-payment/goods-payment-recharge.html">充值</a>
+	</div>
+	<nav>
+		<span class="active" data_type="2">厂家发货</span>
+		<span  data_type="1">上级发货</span>
+	</nav>
+						
+	<!-- <div class="goods-price">
+		<span class="jine">我的货款：<i>199.00</i></span>
+		<span class="add">充值</span>
+	</div>
+	<div class="ctrl">
+		<img src="@static_path/temp/img/goods.png" alt="">
+		<div class="about">
+			<p>韩束红石榴洁面乳</p>
+			<p class="guige">规格：盒</p>
+			<p class="price">拿货价：<span id="goods-price">199.3</span></p>
+		</div>
+		<div class="btn-area">
+			<div class="whole">
+				<span class="minus" id="minus-btn">—</span><span class="value" id="goodsNum">1</span><span class="add" id="add-btn">+</span>
+			</div>
+		</div>
+		<div class="bottom">
+			上级发货
+		</div>
+	</div>
+	<div class="descrip">
+		<p>下单说明</p>
+		<p>下单说明下单说明下单说明下单说明下单说明下单说明下单说明下单说明</p>
+	</div>
+	<div class="submit">
+		<span class="jine">订单金额：<i id="totalValue">199.00</i></span>
+		<span class="submit-btn" id="submit-btn">提交订单</span>
+	</div> -->
+	<script src="@static_path/libs/zepto/zepto.min.js"></script>
+	<script src="@static_path/libs/doT-master/doT.min.js"></script>
+	<script src="@static_path/libs/layer-mobile/layer.js"></script>
+	<script src="@static_path/bundle/order-confirm.js?v=@version"></script>
+</body>
+</html>

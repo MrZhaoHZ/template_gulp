@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的学生</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+    <style>
+        body {font-size:100px; font-family: "Microsoft Yahei";width: 100%;background: #fbfbff; overflow-x: 0; margin: 0; padding: 0; }
+        ul {padding-left: 0;margin: 0;}
+        li {list-style-type: none; margin: 0; padding: 0; text-decoration: none;}
+        a {text-decoration: none;}
+        nav {font-size: .24rem; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd; position: fixed; top: 0; z-index: 999;width: 100%;}
+        nav ul {height: .62rem; }
+        nav li {width: 50%; height: 100%; line-height: .62rem; float: left; text-align: center; box-sizing: border-box; background: #fafafa; color: #999;}
+        .nav-active {background: #eaeaea; color: #000;}
+        nav li:first-child {border-right: 1px solid #ddd;}
+        .name-per {height: .7rem; font-size: .3rem; line-height: .7rem;border-top: 1px solid #eee; border-bottom: 1px solid #eee; background: #fff; position: relative;}
+        .name {margin-left: .3rem; }
+         .per {margin-right: .8rem; float: right; color: #999;}
+         .toggle {position: absolute; right: .25rem; top: 0; background: url('$!{staticWebPath}/images/wechat/down1.png') no-repeat center; width: .3rem; height: .7rem; background-size: .3rem .17rem}
+         .toggle-active {position: absolute; right: .25rem; top: 0; background: url('$!{staticWebPath}/images/wechat/up1.png') no-repeat center; width: .3rem; height: .7rem; background-size: .3rem .17rem}   
+
+        .content {font-size: .25rem; margin-top: .6rem;}
+
+        .details {margin: .13rem .3rem; display: none; }
+        .details li {height: .5rem; line-height: .5rem; }
+        .details li>i {color: #999;  font-style: normal; height: .5rem; line-height: .5rem;}
+        .details li>span {color: #6eb92b; float: right;}
+
+        .k-content {display: none;margin-top: .6rem;}
+        .recent {font-size: .3rem; border-left: 3px solid #6eb92b; padding-left: .1rem; margin-top: .8rem; margin-left: .3rem; line-height: .3rem;}
+        .k-point ul {padding: .1rem .3rem;}
+        .k-point>ul>li {font-size: .24rem;  }
+        .k-point>ul>li a {color: #000;}
+
+        /*菜单样式*/
+        a:link,a:visited{text-decoration: none; }
+        a:active,a:focus{background: #eee }
+        .list{border-bottom:solid 1px #eee;margin:.14rem auto 0 auto; font-size: .3rem; }
+        .list ul li{background-color:#fff; border:solid 1px #eee; border-bottom:0;}
+        .list ul li a{padding-left: .3rem;color: #666; font-size:.3rem; display: block;  height:.7rem;line-height: .7rem;position: relative;
+        }
+        .list ul li .inactive{ background:url($!{staticWebPath}/images/wechat/down1.png) no-repeat right;background-size: .3rem .16rem; background-position-x: 95%;}
+        .list ul li .inactives{background:url($!{staticWebPath}/images/wechat/up1.png) no-repeat right; background-size: .3rem .16rem; background-position-x: 95%;}
+        .list ul li ul{display: none;}
+        .list ul li ul li { border-left:0; border-right:0; background-color:#fff; border-color:#eee;}
+        .list ul li ul li ul{display: none;}
+        .list ul li ul li a{ padding-left:.6rem;}
+        .list ul li ul li ul li { background-color:#fff; border-color:#eee; }
+        .last{ background-color:#d6e6f1; border-color:#6196bb;}
+        .list ul li ul li ul li a{ color:#666; padding-left:.9rem;}
+        .top{
+            top: 0;
+        }
+        .footer{
+            bottom: 0;
+        }
+        .top,.footer{
+            position: fixed;
+            left: 0;
+            text-align: center;
+            line-height: 50px;
+            height: 50px;
+            width: 100%;
+            background-color: #0dcecb;
+            color: #fff;
+            z-index: 100;
+        }
+        #page1{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #fafafa;
+            z-index: 10;
+        }
+        #pullDown, #pullUp {
+            background:#fff;
+            height:40px;
+            line-height:40px;
+            padding:5px 10px;
+            border-bottom:1px solid #ccc;
+            font-weight:bold;
+            font-size:14px;
+            color:#888;
+        }
+        #pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+            display:block; float:left;
+            width:40px; height:40px;
+            background:url($!{staticWebPath}/images/wechat/refresh-flag.png) 0 0 no-repeat;
+            -webkit-background-size:40px 80px;
+            background-size:40px 80px;
+            -webkit-transition-property:-webkit-transform;
+            -webkit-transition-duration:250ms;
+        }
+        #pullDown .pullDownIcon {
+            -webkit-transform:rotate(0deg) translateZ(0);
+        }
+        #pullUp .pullUpIcon  {
+            -webkit-transform:rotate(-180deg) translateZ(0);
+        }
+
+        #pullDown.flip .pullDownIcon {
+            -webkit-transform:rotate(-180deg) translateZ(0);
+        }
+
+        #pullUp.flip .pullUpIcon {
+            -webkit-transform:rotate(0deg) translateZ(0);
+        }
+
+        #pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+            background-position:0 100%;
+            -webkit-transform:rotate(0deg) translateZ(0);
+            -webkit-transition-duration:0ms;
+
+            -webkit-animation-name:loading;
+            -webkit-animation-duration:2s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:linear;
+        }
+
+        @-webkit-keyframes loading {
+            from { -webkit-transform:rotate(0deg) translateZ(0); }
+            to { -webkit-transform:rotate(360deg) translateZ(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="for-student nav-active">按学生查看</li>
+            <li class="for-know">按知识点查看</li>
+        </ul>
+    </nav>
+    <div class="content" id="page1">
+        <div id="scroller">
+            <!-- ## <div id="pullDown">
+            ##     <span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+            ## </div> -->
+            <ul id="stuList">
+                <li>
+                    <div class="name-per">
+                        <span class="name">第一个人</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">李晓明</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="name-per">
+                        <span class="name">第20个人</span>
+                        <span class="per">80%</span>
+                        <span class="toggle"></span>
+                    </div>
+                    <ul class="details">
+                        <li>
+                            <i>已学科目：</i>
+                            <span class="course">数学，语文，英语</span>
+                        </li>
+                        <li>
+                            <i>总课时：</i>
+                            <span class="course-num">50</span>
+                        </li>
+                        <li>
+                            <i>课程时长（分）：</i>
+                            <span class="course-time">230</span>
+                        </li>
+                        <li>
+                            <i>已观看数：</i>
+                            <span class="my-num">5</span>
+                        </li>
+                        <li>
+                            <i>完成度：</i>
+                            <span class="complete">20.3%</span>
+                        </li>
+                        <li>
+                            <i>学习时长：</i>
+                            <span class="my-time">1小时2分钟29秒</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="pullUp">
+                <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-menu">
+    </div>
+
+    <div class="k-content" id="page2">
+        <div class="recent">最近</div>
+        <div class="k-point">
+            <ul>
+                <li><a href="javascript:void">初中语文-基础知识-文言文</a></li>
+                <li><a href="javascript:void">初中数学-方程不等式</a></li>
+                <li><a href="javascript:void">初中英语-语法</a></li>
+                <li><a href="javascript:void">初中英语-阅读理解</a></li>
+                <li><a href="javascript:void">初中数学-方程不等式</a></li>
+            </ul>
+        </div>
+
+        <div class="list">
+            <ul class="yiji">
+                <li><a href="javascript:0" class="inactive">初中语文</a>
+                    <ul style="display: none">
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="javascript:0" class="inactive">初中数学</a>
+                    <ul style="display: none">
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="javascript:0" class="inactive">初中科学</a>
+                    <ul style="display: none">
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="javascript:0" class="inactive">初中英文</a>
+                    <ul style="display: none">
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:0" class="inactive active">古代诗词鉴赏</a>
+                            <ul>
+                                <li><a href="javascript:0">基础知识</a></li>
+                                <li><a href="javascript:0">现代文阅读</a></li>
+                                <li><a href="javascript:0">文言文</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- //适应屏幕大小 -->
+    <script >
+        var deviceWidth=document.documentElement.clientWidth,deviceHeight=document.documentElement.clientHeight;
+        if(deviceHeight<deviceWidth)deviceWidth=deviceHeight;
+        if(deviceWidth>640)deviceWidth=640;
+        document.documentElement.style.fontSize=deviceWidth/6.4+'px';
+    </script>
+    <script src="@static_path/libs/zepto/zepto.min.js"></script>
+    <script src="@static_path/libs/iscroll/iscroll.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.name-per').tap(function(){
+                $(this).siblings('.details').toggle();
+                $(this).children('.toggle').toggleClass('toggle-active');
+            });
+            $('nav li').tap(function(){
+                $(this).addClass('nav-active').siblings('nav li').removeClass('nav-active');
+            });
+            $('.for-student').tap(function(){
+                $('#page1').css('display','block');
+                $('#page2').css('display','none')
+            });
+
+            $('.for-know').tap(function(){
+                $('#page2').css('display','block');
+                $('#page1').css('display','none')
+            });
+            $('.inactive').tap(function(){
+                if($(this).siblings('ul').css('display')=='none'){
+                    $(this).parent('li').siblings('li').removeClass('inactives');
+                    $(this).addClass('inactives');
+                    $(this).siblings('ul').show().children('li');
+                    if($(this).parents('li').siblings('li').children('ul').css('display')=='block'){
+                        $(this).parents('li').siblings('li').children('ul').parent('li').children('a').removeClass('inactives');
+                    }
+                }else{
+                    //控制自身变成+号
+                    $(this).removeClass('inactives');
+                    //控制自身菜单下子菜单隐藏
+                    $(this).siblings('ul').hide();
+                    //控制自身子菜单变成+号
+                    $(this).siblings('ul').children('li').children('ul').parent('li').children('a').addClass('inactives');
+                    //控制自身菜单下子菜单隐藏
+                    $(this).siblings('ul').children('li').children('ul').hide();
+
+                    //控制同级菜单只保持一个是展开的（-号显示）
+                    $(this).siblings('ul').children('li').children('a').removeClass('inactives');
+                }
+            });
+        });
+    </script>
+    <script>
+        var data,
+            myScroll,
+            //pullDownEl, pullDownOffset,
+            pullUpEl, pullUpOffset,
+            generatedCount = 0;
+        // function pullDownAction () {
+        //     $.getJSON('/uploads/rs/200/ptvnx6ur/test.json', function (data, state) {
+        //     });
+        // }
+
+        function pullUpAction () {
+            $.ajax({
+                type: 'POST',
+                url: '/wechat/getMyStuList.do',
+                data: { userId: '' },
+                dataType: 'json',
+                success: function(data){
+                    var tempHTML = '';
+                    for(var i=0;i<20;i++) {
+                        tempHTML +='<li>'+
+                        '    <div class="name-per">'+
+                        '        <span class="name">第一个人</span>'+
+                        '        <span class="per">80%</span>'+
+                        '        <span class="toggle"></span>'+
+                        '    </div>'+
+                        '    <ul class="details">'+
+                        '        <li>'+
+                        '            <i>已学科目：</i>'+
+                        '            <span class="course">数学，语文，英语</span>'+
+                        '        </li>'+
+                        '        <li>'+
+                        '            <i>总课时：</i>'+
+                        '            <span class="course-num">50</span>'+
+                        '        </li>'+
+                        '        <li>'+
+                        '            <i>课程时长（分）：</i>'+
+                        '            <span class="course-time">230</span>'+
+                        '        </li>'+
+                        '        <li>'+
+                        '            <i>已观看数：</i>'+
+                        '            <span class="my-num">5</span>'+
+                        '        </li>'+
+                        '        <li>'+
+                        '            <i>完成度：</i>'+
+                        '            <span class="complete">数学，语文，英语</span>'+
+                        '        </li>'+
+                        '        <li>'+
+                        '            <i>学习时长：</i>'+
+                        '            <span class="my-time">1小时2分钟29秒</span>'+
+                        '        </li>'+
+                        '    </ul>'+
+                        '</li>'
+                    }
+                    setTimeout(function () {
+                        $('#stuList').append(tempHTML);
+                        myScroll.refresh();
+                        $('.name-per').unbind('tap');
+                        $('.name-per').tap(function(){
+                            //$(this).siblings('.name-per').children('.details').toggle();
+                            $(this).siblings('.details').toggle();
+                            $(this).children('.toggle').toggleClass('toggle-active');
+                        });
+                    }, 600);
+                },
+                error: function(xhr, type){
+                }
+            });
+        }
+
+        //初始化绑定iScroll控件
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        document.addEventListener('DOMContentLoaded', loaded, false);
+        function loaded() {
+            // pullDownEl = document.getElementById('pullDown');
+            // pullDownOffset = pullDownEl.offsetHeight;
+            pullUpEl = document.getElementById('pullUp');   
+            pullUpOffset = pullUpEl.offsetHeight;
+
+            /**
+             * 初始化iScroll控件
+             */
+            myScroll = new iScroll('page1', {
+                vScrollbar : false,
+                //topOffset : pullDownOffset,
+                onRefresh : function () {
+                    // if (pullDownEl.className.match('loading')) {
+                    //     pullDownEl.className = '';
+                    //     pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+                    // } else
+                    if (pullUpEl.className.match('loading')) {
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+                    }
+                },
+                onScrollMove: function () {
+                    // if (this.y > 5 && !pullDownEl.className.match('flip')) {
+                    //     pullDownEl.className = 'flip';
+                    //     pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+                    //     this.minScrollY = 0;
+                    // } else
+                    if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'flip';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+                    }
+                },
+                onScrollEnd: function () {
+                    // if (pullDownEl.className.match('flip')) {
+                    //     pullDownEl.className = 'loading';
+                    //     pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+                    //     pullDownAction();
+                    // } else
+                    if (pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'loading';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+                        pullUpAction();
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

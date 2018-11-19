@@ -1,0 +1,681 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(72);
+
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+	function is_weixin() {
+	    var ua = navigator.userAgent.toLowerCase();
+	    if (ua.match(/MicroMessenger/i) == "micromessenger") {
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+	exports.isWX = is_weixin;
+
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, exports, __webpack_require__) {
+
+	var api_path_config = __webpack_require__(4);
+	var wxModule = __webpack_require__(2);
+	function redirectURL() {
+		if(!wxModule.isWX()) {
+			location.href = 'pwd-login.html';
+		} else {
+			location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + api_path_config.appid + '&redirect_uri=https%3A%2F%2F' + api_path_config.wxdomain + '%2Fwechat_web%2Fwechat%2FwxAutho.do%3Fredirect_url%3Dhttps%253A%252F%252F' + api_path_config.wxdomain + '%252Fhtml%252Fwx-login.html&response_type=code&scope=snsapi_userinfo';
+		}
+	}
+	function ajaxPostAct(url,id,param,callback) {
+		if(!url) {
+			url = '/gate.do';
+		}
+		if(id) {
+			param.id = id;
+		}
+		var param = {
+			req: JSON.stringify(param)
+		}
+		// $.post(api_path_config.api_path_3 + url,param,function(data){
+		// 	// if(data.isLogin) {
+		// 		if(typeof data != 'object') {
+		// 			callback(JSON.parse(data));
+		// 		} else {
+		// 			callback(data);
+		// 		}
+		// 	// } else {
+		// 		// redirectURL();
+		// 	// }
+		// });
+		$.ajax({
+	        type: "post",
+	        data: param,
+	        url: api_path_config.api_path_act + url,
+	        timeout : 3000,
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	        }
+	    });
+	}
+	//act ajax dl
+	function ajaxPost(url,id,param,callback) {
+		if(!url) {
+			url = '/gate.do';
+		}
+		if(id) {
+			param.id = id;
+		}
+		var param = {
+			req: JSON.stringify(param)
+		}
+		// $.post(api_path_config.api_path_3 + url,param,function(data){
+		// 	// if(data.isLogin) {
+		// 		if(typeof data != 'object') {
+		// 			callback(JSON.parse(data));
+		// 		} else {
+		// 			callback(data);
+		// 		}
+		// 	// } else {
+		// 		// redirectURL();
+		// 	// }
+		// });
+		$.ajax({
+	        type: "post",
+	        data: param,
+	        url: api_path_config.api_path_3 + url,
+	        timeout : 3000,
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	        }
+	    });
+	}
+	function ajaxPostWXDL(url,id,param,callback) {
+		if(!url) {
+			url = '/gate.do';
+		}
+		if(id) {
+			param.id = id;
+		}
+		var param = {
+			req: JSON.stringify(param)
+		}
+		// $.post(api_path_config.api_path_3 + url,param,function(data){
+		// 	// if(data.isLogin) {
+		// 		if(typeof data != 'object') {
+		// 			callback(JSON.parse(data));
+		// 		} else {
+		// 			callback(data);
+		// 		}
+		// 	// } else {
+		// 		// redirectURL();
+		// 	// }
+		// });
+		$.ajax({
+	        type: "post",
+	        data: param,
+	        url: api_path_config.wxdomainDL + url,
+	        timeout : 3000,
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	        }
+	    });
+	}
+	function ajaxPostTimeoutHandle(url,id,param,callback, timeOutCallBack) {
+		if(!url) {
+			url = '/gate.do';
+		}
+		if(id) {
+			param.id = id;
+		}
+		var param = {
+			req: JSON.stringify(param)
+		}
+		// $.post(api_path_config.api_path_3 + url,param,function(data){
+		// 	// if(data.isLogin) {
+		// 		if(typeof data != 'object') {
+		// 			callback(JSON.parse(data));
+		// 		} else {
+		// 			callback(data);
+		// 		}
+		// 	// } else {
+		// 		// redirectURL();
+		// 	// }
+		// });
+		$.ajax({
+	        type: "post",
+	        data: param,
+	        url: api_path_config.api_path_3 + url,
+	        timeout : 3000,
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	        },
+			error: function(jqXHR, textStatus, errorThrown){ //请求完成后最终执行参数
+		　　　　if(textStatus=='timeout'){//超时,status还有success,error等值的情况
+		　　　　　  timeOutCallBack();
+
+		　　　　}
+		　　}
+	    });
+	}
+	function ajaxGet(url,id,param,callback) {
+		if(!url) {
+			url = '/gate.do';
+		} 
+		if(id) {
+			param.id = id;
+		}
+		var param = {
+			req: JSON.stringify(param)
+		}
+		// $.get(api_path_config.api_path_3 + url,param,function(data){
+		// 	// if(data.isLogin) {
+		// 		if(typeof data != 'object') {
+		// 			callback(JSON.parse(data));
+		// 		} else {
+		// 			callback(data);
+		// 		}
+		// 	// } else {
+				
+		// 	// }
+		// });
+		$.ajax({
+	        type: "get",
+	        data: param,
+	        url: api_path_config.api_path_3 + url,
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	        }
+	    });
+	}
+
+	function ajaxDlGet(id,param,callback) {
+		if(id) {
+			param.id = id;
+		}
+		var param = {
+			req: JSON.stringify(param)
+		}
+		$.ajax({
+	        type: "get",
+	        data: param,
+	        url: api_path_config.wxdomainDL + "/gate.do",
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	       }
+	    });
+	}
+
+
+	function ajaxPost4Autho(url,param,callback) {
+		// $.post(api_path_config.api_path_2 + url,param,function(data){
+		// 	// if(data.isLogin) {
+		// 		if(typeof data != 'object') {
+		// 			callback(JSON.parse(data));
+		// 		} else {
+		// 			callback(data);
+		// 		}
+		// 	// } else {
+		// 		// redirectURL();
+		// 	// }
+		// });
+		$.ajax({
+	        type: "post",
+	        data: param,
+	        url: api_path_config.api_path_2 + url,
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	        }
+	    });
+	}
+
+	function ajaxGet4Autho(url,param,callback) {
+		// $.get(api_path_config.api_path_2 + url,param,function(data){
+		// 	// if(data.isLogin) {
+		// 		if(typeof data != 'object') {
+		// 			callback(JSON.parse(data));
+		// 		} else {
+		// 			callback(data);
+		// 		}
+		// 	// } else {
+		// 		// redirectURL();
+		// 	// }
+		// });
+		$.ajax({
+	        type: "get",
+	        data: param,
+	        url: api_path_config.api_path_2 + url,
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	        }
+	    });
+	}
+	function ajaxWxAutho(url,param,callback) {
+		$.get(api_path_config.api_path_4 + url,param,function(data){
+			// if(data.isLogin) {
+				if(typeof data != 'object') {
+					callback(JSON.parse(data));
+				} else {
+					callback(data);
+				}
+			// } else {
+				// redirectURL();
+			// }
+		});
+	}
+
+	//登录跨域ajax跳转
+	function ajaxGet4AuthoCR(url,param,callback) {
+		$.ajax({
+	        type: "get",
+	        data: param,
+	        url: api_path_config.api_path_2 + url,
+	        xhrFields:{
+		      withCredentials: true
+		    },
+		    //crossDomain: true,
+	        success: function(data) {
+	   //      	if(typeof data != 'object') {
+				// 	callback(JSON.parse(data));
+				// } else {
+				// 	callback(data);
+				// }
+				loginJudge(data, callback);
+	        }
+	    });
+	}
+	//登录拦截
+	function loginJudge(data, callback) {
+		if(typeof data != 'object') {
+			var data = JSON.parse(data);
+			if(data.code === '40002') {
+				redirectURL();
+			} else {
+				callback(data);
+			}
+		} else {
+			if(data.code === '40002') {
+				redirectURL();
+			} else {
+				callback(data);
+			}
+		}
+	}
+	exports.ajaxPost = ajaxPost;
+	exports.ajaxPostTimeoutHandle = ajaxPostTimeoutHandle;
+	exports.ajaxGet = ajaxGet;
+	exports.post = ajaxPost;
+	exports.get = ajaxGet;
+	exports.ajaxPost4Autho = ajaxPost4Autho;
+	exports.ajaxGet4Autho = ajaxGet4Autho;
+	exports.ajaxGet4AuthoCR = ajaxGet4AuthoCR;
+	exports.ajaxWxAutho = ajaxWxAutho;
+	exports.redirectURL = redirectURL;
+	exports.ajaxPostAct = ajaxPostAct;
+	exports.ajaxDlGet = ajaxDlGet;
+	exports.ajaxPostWXDL = ajaxPostWXDL;
+
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports) {
+
+	module.exports = {
+		"api_path_1": "https://bsstest1.yyzws.com/leaf_manager_web",
+		"api_path_actDra": "https://img.yyzws.com/ex/",
+		"api_path_2": "https://ssotest1.yyzws.com/leaf_sso_web",
+		"api_path_3": "https://gatewaytest1.yyzws.com/mobile_gateway_web",
+		"api_path_4": "https://wxtest1.yyzws.com/wechat_web",
+		"static_path": "https://statictest1.yyzws.com",
+		"upload_path": "https://img.yyzws.com/ex/",
+		"upload_path_sq": "https://yiyezi.yyzws.com/ex/",
+		"upload_path_in": "https://yiyezi.yyzws.com/in/",
+		"upload_path_h5": "https://img.yyzws.com/ex/",
+		"wxdomain": "wxtest1.yyzws.com",
+		"wxdomainDL": "https://dltest1.yyzws.com/dl_gateway_web",
+		"msgReq": "/message/sendSms.do",
+		"appid": "wxe2ad70729e334402",
+		"secret": "1b1b3479e0fd475a0fc6ae9d6595429e",
+		"wxQrcode": "yyz_test_qrcode.jpg"
+	}
+
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports) {
+
+	function remSetting(isHd) {
+	    var deviceWidth = document.documentElement.clientWidth;
+	    if (deviceWidth > 750) deviceWidth = 750;
+	    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+	    if(!isHd){
+	    	$('.Hd').removeClass('Hd');
+	    }
+	}
+
+	exports.remSetting = remSetting;
+
+
+/***/ }),
+
+/***/ 11:
+/***/ (function(module, exports) {
+
+	function open(msg) {
+		layer.open({
+			content: msg
+			,skin: 'msg'
+			,time: 2 //2秒后自动关闭,
+			// ,fixed: false
+			// ,top: -250
+			// ,anim: false
+		});
+	}
+	function openLongTime(msg) {
+		layer.open({
+			content: msg
+			,skin: 'msg'
+			,time: 5 //2秒后自动关闭,
+			// ,fixed: false
+			// ,top: -250
+			// ,anim: false
+		});
+	}
+
+	exports.open = open;
+	exports.openLongTime = openLongTime;
+
+/***/ }),
+
+/***/ 12:
+/***/ (function(module, exports) {
+
+	function getQueryString(name) {
+	    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r != null) {
+	        return unescape(r[2]);
+	    }
+	    return null;
+	}
+	exports.getQueryString = getQueryString;
+
+/***/ }),
+
+/***/ 72:
+/***/ (function(module, exports, __webpack_require__) {
+
+	var remSetting = __webpack_require__(7).remSetting;
+	var $ajax = __webpack_require__(3);
+	var wxModule = __webpack_require__(2);
+	var layer = __webpack_require__(11);
+	var tmp_path_config = __webpack_require__(4);
+	var httpURL = __webpack_require__(12);
+	$(function(){
+		var from = httpURL.getQueryString('from');
+		remSetting();
+		var timeLeft = $('#time-left');
+		var timeValue = null;
+		var time = null;
+		var is_actDele = 0;
+		if(wxModule.isWX()){
+			//根据openId取手机号
+			//is_act_dele(); // 判断用户是否是活动引流进来的代理商 如果是引流进来的就必须输入微信号！
+			var openId = $.fn.cookie('openid');
+			$ajax.post(null,'004000004',{open_id:openId,member_id:''},function(data){
+				if(data.success) {
+					if(from == "login"){ // 下单成为代理商后第一次进入时设置密码
+						
+					}else{
+						$('#phoneNum').val(data.data.mobile);
+						$('#phoneNum').attr("disabled", "disabled");
+					}
+				}
+			});
+		} else {
+			//取会员号
+			var memberId = $.fn.cookie('member_id');
+			//根据memberId取手机号
+			$ajax.post(null,'004000004',{open_id:'',member_id: memberId},function(data){
+				if(data.success) {
+					if(from == "login"){ // 下单成为代理商后第一次进入时设置密码
+						
+					}else{
+						$('#phoneNum').val(data.data.mobile);
+						$('#phoneNum').attr("disabled", "disabled");
+					}
+				}
+			});
+		}
+		
+		function  is_act_dele()  
+		{  
+			$ajax.ajaxDlGet("008000007", {open_id: $.fn.cookie('openid')}, function(data){
+				if(data.success) {
+					if(data.data){
+						is_actDele = 1; // 返回data.data = true 时就是引流进来的
+						$(".div_we_chat").css("display", '');
+					}
+				}
+			});
+		};
+		
+		
+		
+		$('#get-valicode').click(function(){
+			if($('#phoneNum').val() === '') {
+				$('#finish-tips').html('手机号不能为空');
+				return;
+			}
+			if(time) {
+				clearInterval(time);
+			}
+			$ajax.ajaxPost4Autho(tmp_path_config.msgReq, {mobile:$('#phoneNum').val(), handle_type:'modify_password'}, function(data){
+				if(data.success) {
+					// $.cookie('memberId',data.memberId);
+					// $.cookie('openId',data.openId);
+					// location.href = 'reset-gesture.html';
+				}else if(data.code === '30008'){
+					layer.open(data.msg);
+				}
+			});
+			timeValue = 60;
+			var valicodeBtn = $(this);
+			valicodeBtn.hide();
+			timeLeft.html(timeValue + 's').show();
+			time = setInterval(function(){
+				timeValue--;
+				if(timeValue > 0) {
+					timeLeft.html(timeValue + 's');
+				} else {
+					timeLeft.hide();
+					valicodeBtn.show();
+				}
+			},1000);
+		});
+		$('#phoneNum').keyup(function(){
+			$(this).val($(this).val().replace(/\D/g,''));
+		});
+		$('#valicode').keyup(function(){
+			$(this).val($(this).val().replace(/\D/g,''));
+		});
+		$('#password').keyup(function(){
+			$(this).val($(this).val().replace(/[\W]/g,''));
+		});
+		$('#finish-reset').click(function(){
+			if($('#phoneNum').val() == '') {
+				$('#finish-tips').html('请输入手机号');
+				return;
+			}
+			if($('#valicode').val()=='') {
+				$('#finish-tips').html('请输入验证码');
+				return;
+			}
+			if($('#weChat').val()==''  && is_actDele == 1) { // 当is_actDele ==  1 的时候就是引流进来的，微信号必须填，已经有微信号的时候就不需要填写
+				$('#finish-tips').html('请输入微信号');
+				return;
+			}
+			if($('#password').val()=='') { 
+				$('#finish-tips').html('请输入新密码');
+				return;
+			} else {
+				var password = $('#password').val();
+				if(password.length < 6) {
+					$('#finish-tips').html('请输入6-15位密码');
+					return;
+				} else {
+					if(!(/^[0-9a-zA-Z]+$/.test(password))) {
+						$('#finish-tips').html('只能输入字母和数字');
+						return;
+					}
+				}
+			}
+			var resetPwdReq = '';
+			if(wxModule.isWX()){
+				resetPwdReq = '004000007';
+			} else {
+				resetPwdReq = '004000007';
+			}
+			$ajax.ajaxPost(null, resetPwdReq, {mobile:$('#phoneNum').val(), verify_code: $('#valicode').val(), wechat_id: $('#weChat').val(), modify_type: '2',pwd:hex_md5($('#password').val())}, function(data){
+				if(data.success) {
+					layer.open('重置密码成功');
+					setTimeout(function(){
+						$ajax.redirectURL();
+					},2000);
+				} else {
+					if(data.code === '30010' || data.code === '30014' || data.code === '30008'){
+						$('#finish-tips').html(data.msg);
+					}
+				}
+			});
+		});
+	});
+
+
+/***/ })
+
+/******/ });

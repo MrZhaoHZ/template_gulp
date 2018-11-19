@@ -1,0 +1,128 @@
+@import "_var";
+body{
+	background-color: #f5f5f5;
+	margin: 0;
+	max-width: 7.5rem;
+	margin: 0 auto;
+}
+.container{
+	margin-top: 0;
+	position: relative;
+	.top-head{
+		background-color: white;
+		overflow: hidden;
+		margin-bottom: 0.2rem;
+		background-color: #f5ffeb;
+		.top_left{
+			float: left;
+			margin: 0;
+			display: inline-block;
+			position: relative;
+			.user-pic{
+				position: absolute;
+				left: 0.24rem;
+				top: 50%;
+				margin-top: 0.62rem;
+				background-image: url(@recharge-warning);
+				display: inline-block;
+				width: 0.44rem;
+				height: 0.44rem;
+				background-repeat:no-repeat;
+				background-size: 0.44rem;
+			}
+		}
+		.top_right{
+			display: inline-block;
+			float: left;
+			width: 6.3rem;
+			margin-left: 0.9rem;
+			.top_prompt{
+				font-size: 0.24rem;
+				color: #999999;
+			}
+		}
+	}
+
+	.current_payment{
+		height: 1rem;
+		background-color: white;
+		margin-bottom: 0.2rem;
+		a{
+			color: #222222;
+			float: right;
+			margin-top: 0.22rem;
+			margin-right: 0.24rem;
+			border-radius: 0.09rem;
+			padding: 0.14rem 0.26rem;
+			font-size: 0.28rem;
+			border: 1px solid #999999;
+			text-decoration: none;
+		}
+		span:nth-child(1){
+			color: #222222;
+			float: left;
+			margin-left: 0.24rem;
+			margin-top: 0.38rem;
+			font-size: 0.3rem;
+		}
+		span:nth-child(2){
+			float: left;
+			margin-top: 0.38rem;
+			font-size: 0.3rem;
+			color: #ff3333;
+			font-size: 0.3rem;
+		}
+		span:nth-child(3){
+			float: right;
+			margin-top: 0.22rem;
+			margin-right: 0.24rem;
+			border-radius: 0.09rem;
+			padding: 0.14rem 0.26rem;
+			font-size: 0.28rem;
+			border: 1px solid #999999;
+		}
+		input{
+			color: #a8a8a8;
+			font-size: 0.28rem;
+			border: none;
+			margin-top: 0.38rem;
+			outline: none;
+			margin-left: 0.26rem;
+			display: inline-block;
+			float: left;
+		}
+	}
+	.next-div{
+		height: 0.8em;
+	    margin-top: 0.78rem;
+	    position: relative;
+		.next{
+			color: white;
+			background-color: #66c300;
+			position: absolute;
+			left: 5%;
+			right: 5%;
+			height: 0.7rem;
+			font-size: 0.32rem;
+			border-radius: 0.1rem;
+			font-size: 14px;
+            text-align: center;
+            box-sizing: border-box;
+            line-height: 0.7rem;
+		}
+	}
+}
+.home-btn{
+    z-index: 22;
+    position: absolute;
+    right: 0.15rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #7a7a7a;
+    top: 120%;
+    background-image: url(@team_home);
+    background-position: center; 
+    background-repeat:no-repeat;
+    background-size: 0.47rem 0.48rem;
+}

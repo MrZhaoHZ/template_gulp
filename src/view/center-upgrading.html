@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>个人中心</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="@static_path/libs/swiper/swiper.min.css">
+	<link href="@static_path/libs/layer-mobile/layer.css?v=@version" type="text/css" rel="stylesheet" />
+	<link href="@static_path/css/center.css?v=@version" type="text/css" rel="stylesheet" />
+	<style>
+	</style>
+</head>
+<body class="Hd">
+	<!-- Swiper -->
+	<div class="swiper-container" id="swiper-container" style="display:none">
+		<!-- <div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="../temp/img/swipe.png" alt=""></div>
+			<div class="swiper-slide"><img src="../temp/img/swipe.png" alt=""></div>
+			<div class="swiper-slide"><img src="../temp/img/swipe.png" alt=""></div>
+		</div>
+		<div class="swiper-pagination"></div> -->
+	</div>
+	<div class="user" id="user-info">
+		<!-- <img src="../temp/img/temp.png" alt="">
+		<div class="info">
+			<p class="name">姓名：胡玉龙（合伙人）</p>
+			<p class="uplevel">上级：吕晓晨</p>
+			<a href="account-setting.html"><span></span></a>
+		</div> -->
+	</div>
+	<div class="link">
+		<a style="float: left;"><span class="autho"></span>我的授权</a>
+		<a href="javascript:void(0);" id="authoFind"><span class="autho-find"></span>授权查询</a>
+		<a href="javascript:void(0)" id="develop-agent" style="float: right"><span class="developdaili"></span>发展代理</a>
+	</div>
+	<div class="mg">
+		<p>订单管理</p>
+		<div class="inner">
+			<a style="float: left;">
+				<span class="icon order1"><!-- <i>2</i> --></span>
+				<span>在线下单</span>
+			</a>
+			<a href="order/my-order-upgrading.html?from=login&order_status=00&order_type=1" data-href="" class="golink">
+				<span class="icon order2"><!-- <i class="num2">23</i> --></span>
+				<span>我的订单</span>
+			</a>
+<a href="order/my-order-upgrading.html?from=login&order_status=00&order_type=2" style="margin: 0 0.35rem;">
+				<span class="icon order3"></span>
+				<span>团队订单</span>
+			</a>
+<a data-href="" class="golink" style="float: right">
+				<span class="icon order2"><!-- <i class="num2">23</i> --></span>
+				<span>活动订单</span>
+			</a>
+			<!-- <a href="#" style="float: right;">
+				<span class="icon order4"></span>
+				<span>零售订单</span>
+			</a> -->
+		</div>
+	</div>
+	<div class="task">
+		<a href="javascript:void(0)" style="float: left;">
+			<span id="wait-process"></span>
+			<span>待我处理</span>
+		</a>
+		<a href="javascript:void(0)">
+			<span id="wait-send"></span>
+			<span>待我发货</span>
+		</a>
+		<a href="javascript:void(0)" style="float: right;">
+			<span id="canceling-order"></span>
+			<span>取消中订单</span>
+		</a>
+	</div>
+	<div class="mg">
+		<p>团队管理</p>
+		<div class="inner">
+			<a style="float: left;">
+				<span class="icon team1"><!-- <i class="num2">23</i> --></span>
+				<span>我要升级</span>
+			</a>
+			<a style="margin: 0 0.35rem;">
+				<span class="icon team2"><!-- <i class="num2">23</i> --></span>
+				<span>我的团队</span>
+			</a>
+			<a style="margin: 0 0.35rem;">
+				<span class="icon team3" id="join-audit"><!-- <i class="num2">23</i> --></span>
+				<span>加入审核</span>
+			</a>
+			<a style="float: right;">
+				<span class="icon team4" id="upgrade-audit"><!-- <i class="num2">23</i> --></span>
+				<span>升级审核</span>
+			</a>
+		</div>
+	</div>
+	<div class="mg">
+		<p>货款管理</p>
+		<div class="inner">
+			<a style="float: left;">
+				<span class="icon gm1"><!-- <i>3</i> --></span>
+				<span>货款充值</span>
+			</a>
+			<a href="goods-payment/goods-payment-my.html?from=upGrading">
+				<span class="icon gm2"><!-- <i>3</i> --></span>
+				<span>我的货款</span>
+			</a>
+			<a style="float: right;margin: 0;">
+				<span class="icon gm3" id="payment-audit"><!-- <i>3</i> --></span>
+				<span>货款审核</span>
+			</a>
+			<!-- <a href="#" style="float: right;">
+				<span class="icon gm4"></span>
+				<span>对账中心</span>
+			</a> -->
+		</div>
+	</div>
+	<div id="search-layer" class="search-layer">
+        <div class="search-title"><span>授权查询</span><span class="search-layer-close"></span></div>
+        <div class="findform">
+        	<span style="color: #7c7c7c;">请输入微信号/手机号查询：</span>
+        	<input type="text" id="keyword" placeholder="微信号/手机号" />
+			<br>
+			<span id="seeresult">&nbsp;</span>
+        </div>
+        <div class="tool"><span class="search-now" id="search-now">立即查找</span></div>
+    </div>
+    <div id="develop-layer" class="develop-layer">
+        <div class="search-title"><span>发展代理</span><span class="develop-layer-close"></span></div>
+        <div class="findform">
+        	<span style="color: #7c7c7c;">把以下的链接复制给您的小伙伴吧~</span>
+        	<!-- <text type="text" id="developAgentOnline" value="" data-clipboard-text="Copy Me!"/> -->
+        	<textarea name="" id="developAgentOnline" value="" data-clipboard-text="Copy Me!" rows="4"></textarea>
+			<br>
+			<!-- <span id="seeresult">查询结果：总代</span> -->
+        </div>
+        <div class="tool"><span class="search-now btnCopy" id="copy-now" data-clipboard-target="#developAgentOnline">复制</span></div>
+    </div>
+	<script src="@static_path/libs/zepto/zepto.min.js"></script>
+	<script src="@static_path/libs/swiper/swiper.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="@static_path/libs/doT-master/doT.min.js"></script>
+	<script src="@static_path/libs/layer-mobile/layer.js"></script>
+	<script src="@static_path/libs/clipboard/clipboard.js"></script>
+	<script src="@static_path/bundle/center-upgrading.js?v=@version"></script>
+</body>
+</html>

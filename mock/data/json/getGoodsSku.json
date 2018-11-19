@@ -1,0 +1,354 @@
+{
+  "code": 10000,
+  "msg": "请求处理成功",
+  "data": {
+    "data": [
+      {
+        "id": 3576,
+        "item_uid": "1841254_3576",
+        "item_name": "1212",
+        "item_brief": "",
+        "seller_id": 1841254,
+        "item_brand_id": 376,
+        "item_type": 1,
+        "icon_url": "http://haiynoss.haiyn.com/images/20161008/15/20161008153639702.jpg",
+        "category_id": 41,
+        "market_price": 50000,
+        "promotion_price": 30000,
+        "sale_min_num": 1,
+        "item_status": 1,
+        "virtual_mark": 0,
+        "stock_status": 0,
+        "sale_commission": 0,
+        "delete_mark": 0,
+        "gmt_created": "2016-10-08 15:38:16",
+        "gmt_modified": "2016-10-08 15:38:16",
+        "item_desc": "<p>1213</p>",
+        "desc_tmpl_id": 0,
+        "higo_mark": 0,
+        "category_name": "洁面",
+        "brand_name": "花印",
+        "create_time": "2016-10-08 15:38:16",
+        "status_name": "待审核",
+        "corner_icon_id": 9,
+        "biz_code": "hanshu",
+        "freight": 0,
+        "stock_num": 0,
+        "frozen_stock_num": 0,
+        "biz_tag": 0,
+        "skus": [
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "红色/L"
+          },
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "红色/XL"
+          },
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "红色/XL"
+          },
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "红色/XL"
+          },
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "红色/XL"
+          }
+        ]
+      },
+      {
+        "id": 3575,
+        "item_uid": "1841254_3575",
+        "item_name": "444",
+        "item_brief": "",
+        "seller_id": 1841254,
+        "item_type": 1,
+        "icon_url": "http://haiynoss.haiyn.com/images/20161008/10/20161008105445759.jpg",
+        "category_id": 41,
+        "market_price": 400,
+        "promotion_price": 400,
+        "sale_min_num": 1,
+        "item_status": 1,
+        "virtual_mark": 0,
+        "stock_status": 0,
+        "sale_commission": 0,
+        "delete_mark": 0,
+        "gmt_created": "2016-10-08 15:29:26",
+        "gmt_modified": "2016-10-08 15:29:26",
+        "item_desc": "<p>w75</p>",
+        "desc_tmpl_id": 0,
+        "higo_mark": 0,
+        "category_name": "洁面",
+        "create_time": "2016-10-08 15:29:26",
+        "status_name": "待审核",
+        "biz_code": "hanshu",
+        "freight": 0,
+        "stock_num": 0,
+        "frozen_stock_num": 0,
+        "biz_tag": 0,
+        "skus": [
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "默认"
+          },
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "默认"
+          }
+        ]
+      },
+            {
+        "id": 3575,
+        "item_uid": "1841254_3575",
+        "item_name": "444",
+        "item_brief": "",
+        "seller_id": 1841254,
+        "item_type": 1,
+        "icon_url": "http://haiynoss.haiyn.com/images/20161008/10/20161008105445759.jpg",
+        "category_id": 41,
+        "market_price": 400,
+        "promotion_price": 400,
+        "sale_min_num": 1,
+        "item_status": 1,
+        "virtual_mark": 0,
+        "stock_status": 0,
+        "sale_commission": 0,
+        "delete_mark": 0,
+        "gmt_created": "2016-10-08 15:29:26",
+        "gmt_modified": "2016-10-08 15:29:26",
+        "item_desc": "<p>w75</p>",
+        "desc_tmpl_id": 0,
+        "higo_mark": 0,
+        "category_name": "洁面",
+        "create_time": "2016-10-08 15:29:26",
+        "status_name": "待审核",
+        "biz_code": "hanshu",
+        "freight": 0,
+        "stock_num": 0,
+        "frozen_stock_num": 0,
+        "biz_tag": 0,
+        "skus": [
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "默认"
+          },
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "默认"
+          }
+        ]
+      },
+            {
+        "id": 3575,
+        "item_uid": "1841254_3575",
+        "item_name": "444",
+        "item_brief": "",
+        "seller_id": 1841254,
+        "item_type": 1,
+        "icon_url": "http://haiynoss.haiyn.com/images/20161008/10/20161008105445759.jpg",
+        "category_id": 41,
+        "market_price": 400,
+        "promotion_price": 400,
+        "sale_min_num": 1,
+        "item_status": 1,
+        "virtual_mark": 0,
+        "stock_status": 0,
+        "sale_commission": 0,
+        "delete_mark": 0,
+        "gmt_created": "2016-10-08 15:29:26",
+        "gmt_modified": "2016-10-08 15:29:26",
+        "item_desc": "<p>w75</p>",
+        "desc_tmpl_id": 0,
+        "higo_mark": 0,
+        "category_name": "洁面",
+        "create_time": "2016-10-08 15:29:26",
+        "status_name": "待审核",
+        "biz_code": "hanshu",
+        "freight": 0,
+        "stock_num": 0,
+        "frozen_stock_num": 0,
+        "biz_tag": 0,
+        "skus": [
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "默认"
+          },
+          {
+            "sku_id": 21684,
+            "good_code":"sjdfhsd",
+            "prop": [
+              {
+                "prop_id": "0",
+                "prop_name": "",
+                "value_id": "666",
+                "value_name": ""
+              }
+            ],
+            "origin_price": "1100",
+            "price": "1100",
+            "num": "0",
+            "frozen_num": "0",
+            "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+            "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+            "sku_code": "默认"
+          }
+        ]
+      }
+    ],
+    "total_count": 2041
+  }
+
+}

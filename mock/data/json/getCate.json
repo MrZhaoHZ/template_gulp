@@ -1,0 +1,171 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "data": [
+        {
+            "id": 37,
+            "cate_name": "美容护肤/美体/精油",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 56,
+            "cate_name": "彩妆香水/美妆工具",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 82,
+            "cate_name": "美发护发/假发",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 86,
+            "cate_name": "裤子",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 87,
+            "cate_name": "禁用",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 92,
+            "cate_name": "衣服护理",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 94,
+            "cate_name": "母婴",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 96,
+            "cate_name": "百货/食品",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 98,
+            "cate_name": "日用/百货",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 117,
+            "cate_name": "玩具/ 童车/益智/积木/模型",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 122,
+            "cate_name": "服饰/内衣/家居服",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 141,
+            "cate_name": "饰品/配饰/手表",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 147,
+            "cate_name": "包包/皮包",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 175,
+            "cate_name": "家饰/家纺",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-06-30 02:49:33"
+        },
+        {
+            "id": 194,
+            "cate_name": "童装-裤",
+            "cate_level": 1,
+            "parent_id": 0,
+            "tmpl_id": 0,
+            "top_id": 0,
+            "biz_code": "hanshu",
+            "image_url": "",
+            "gmt_created": "2016-07-31 03:24:01"
+        }
+    ]
+}

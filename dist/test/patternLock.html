@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport"content="width=device-width, initial-scale=1"/>
+	<link rel="icon" href="@static_path/favicon.ico">
+	<title>手势</title>
+	<link href="patternLock.css" rel="stylesheet" type="text/css" />
+	<script src="jquery-1.10.2.js"></script>
+	<script src="patternLock.min.js"></script>
+	<style>
+		.patternextra {
+			margin: 0 auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="patternContainer" class="patternextra"></div>
+	<script>
+	$(function() {
+		var lock = new PatternLock("#patternContainer", {
+			onDraw: function(pattern) {
+				//do something with pattern
+				console.log(pattern);
+				lock.reset();
+			}
+		});
+	});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+{
+  "code": 10000,
+  "msg": "请求处理成功",
+  "data": {
+    "row": 7,
+    "column": 3,
+    "blockWidth":100,
+    "blockInfo": [
+        {
+            "id": [1,2,4,5],
+            "left_top_x": 0,
+            "left_top_y": 0,
+            "bottom_right_x": 2,
+            "bottom_right_y": 2
+        },
+        {
+            "id": [3],
+            "left_top_x": 2,
+            "left_top_y": 0,
+            "bottom_right_x": 3,
+            "bottom_right_y": 1
+        },
+        {
+            "id": [6],
+            "left_top_x": 2,
+            "left_top_y": 1,
+            "bottom_right_x": 3,
+            "bottom_right_y": 2
+        },
+        {
+            "id": [7],
+            "left_top_x": 0,
+            "left_top_y": 2,
+            "bottom_right_x": 1,
+            "bottom_right_y": 3
+        },
+        {
+            "id": [8],
+            "left_top_x": 1,
+            "left_top_y": 2,
+            "bottom_right_x": 2,
+            "bottom_right_y": 3
+        },
+        {
+            "id": [9],
+            "left_top_x": 2,
+            "left_top_y": 2,
+            "bottom_right_x": 3,
+            "bottom_right_y": 3
+        },
+        {
+            "id": [10],
+            "left_top_x": 0,
+            "left_top_y": 3,
+            "bottom_right_x": 1,
+            "bottom_right_y": 4
+        },
+        {
+            "id": [11,12],
+            "left_top_x": 1,
+            "left_top_y": 3,
+            "bottom_right_x": 3,
+            "bottom_right_y": 4
+        },
+        {
+            "id": [13,14,15],
+            "left_top_x": 0,
+            "left_top_y": 4,
+            "bottom_right_x": 3,
+            "bottom_right_y": 5
+        },
+        {
+            "id": [16,17,18],
+            "left_top_x": 0,
+            "left_top_y": 5,
+            "bottom_right_x": 3,
+            "bottom_right_y": 6
+        },
+        {
+            "id": [19,20,21],
+            "left_top_x": 0,
+            "left_top_y": 6,
+            "bottom_right_x": 3,
+            "bottom_right_y": 7
+        }
+    ]
+  }
+}

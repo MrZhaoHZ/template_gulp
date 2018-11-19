@@ -1,0 +1,55 @@
+{
+  "code": 10000,
+  "msg": "请求处理成功",
+  "data": [
+    {
+      "id": 212,
+      "name": "首页",
+      "publish_status": 1
+    },
+    {
+      "id": 173,
+      "name": "基础护肤",
+      "publish_status": 1
+    },
+    {
+      "id": 174,
+      "name": "彩妆香氛",
+      "publish_status": 1
+    },
+    {
+      "id": 181,
+      "name": "个人护理",
+      "publish_status": 1
+    },
+    {
+      "id": 176,
+      "name": "母婴",
+      "publish_status": 1
+    },
+    {
+      "id": 184,
+      "name": "品质生活",
+      "publish_status": 1
+    },
+    {
+      "id": 178,
+      "name": "男士护肤",
+      "publish_status": 1
+    },
+    {
+      "id": 210,
+      "name": "哈哈哈",
+      "publish_status": 1
+    },
+    {
+      "id": 192,
+      "name": "测试母婴",
+      "publish_status": 1
+    },
+    {
+      "id": 187,
+      "name": "测试页面"
+    }
+  ]
+}

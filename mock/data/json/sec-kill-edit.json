@@ -1,0 +1,110 @@
+{
+    "seckill_name": "每日秒杀",
+    "start_time": "2016-10-22 11:08:40",
+    "end_time": "2016-10-22 11:08:40",
+    "sub_seckill_special_d_t_o_list": [
+        {
+            "seckill_id": 3,
+            "sub_seckill_name": "12:00专场",
+            "start_time": "2016-10-22 11:08:40",
+            "end_time": "2016-10-22 11:08:40",
+            "image_url": "http://haiynoss.haiyn.com/images/20160624/19/20160624192911911.jpg",
+            "target_url": "http://m.haiyn.com/detail.html?item_uid=1841254_1107&distributor_id=1715418",
+            "user_sku_limit_number": 1,
+            "seckill_item_d_t_o_list": [
+                {
+                    "image_url":"http://haiynoss.haiyn.com/images/20161008/15/20161008153639702.jpg",
+                    "item_id": 693,
+                    "item_name": "霓净思玻尿酸保湿乳霜50ml",
+                    "item_sku_sn": "NJS0003",
+                    "sku_code": "默认",
+                    "seller_id": 1841254,
+                    "seckill_price": 100,
+                    "market_price": 500,
+                    "number": 30,
+                    "item_sku_id": 9328
+                },
+                {
+                    "image_url":"http://haiynoss.haiyn.com/images/20161008/15/20161008153639702.jpg",
+                    "item_id": 693,
+                    "item_name": "活泉锁水保湿霜（滋润型）55g",
+                    "item_sku_sn": "HQ0012",
+                    "sku_code": "默认",
+                    "seller_id": 1841254,
+                    "seckill_price": 100,
+                    "market_price": 600,
+                    "number": 10,
+                    "item_sku_id": 12448
+                }
+            ]
+        },
+        {
+            "sub_seckill_name": "14:00专场",
+            "start_time": "2016-10-22 11:08:40",
+            "end_time": "2016-10-22 11:08:40",
+            "image_url": "http://haiynoss.haiyn.com/images/20160908/23/20160908232145510.png",
+            "target_url": "http://m.haiyn.com/detail.html?item_uid=1841254_1107&distributor_id=1715418",
+            "user_sku_limit_number": 1,
+            "seckill_item_d_t_o_list": [
+                {
+                    "image_url":"http://haiynoss.haiyn.com/images/20161008/15/20161008153639702.jpg",
+                    "item_id": 1245,
+                    "item_name": "资生堂丝蓓绮奢华修复护发素550ml",
+                    "item_sku_sn": "GKX0001",
+                    "sku_code": "默认",
+                    "seller_id": 1841254,
+                    "seckill_price": 100,
+                    "market_price": 600,
+                    "number": 20,
+                    "item_sku_id": 13365
+                },
+                {
+                    "image_url":"http://haiynoss.haiyn.com/images/20161008/15/20161008153639702.jpg",
+                    "item_id": 1093,
+                    "item_name": "果口新牌牙膏100ml",
+                    "item_sku_sn": "GKX0001",
+                    "sku_code": "默认",
+                    "seller_id": 1841254,
+                    "seckill_price": 100,
+                    "market_price": 200,
+                    "number": 30,
+                    "item_sku_id": 12802
+                }
+            ]
+        },
+        {
+            "sub_seckill_name": "16:00专场55555",
+            "start_time": "2016-10-22 11:08:40",
+            "end_time": "2016-10-22 11:08:40",
+            "image_url": "http://haiynoss.haiyn.com/images/20160624/19/20160624192911911.jpg",
+            "target_url": "http://m.haiyn.com/detail.html?item_uid=1841254_1107&distributor_id=1715418",
+            "user_sku_limit_number": 1,
+            "seckill_item_d_t_o_list": [
+                {
+                    "image_url":"http://haiynoss.haiyn.com/images/20161008/15/20161008153639702.jpg",
+                    "item_id": 1172,
+                    "item_name": "资生堂惠润洗发露（绿野芳香）600ml",
+                    "item_sku_sn": "ZST0021",
+                    "sku_code": "",
+                    "seller_id": 1841254,
+                    "seckill_price": 100,
+                    "market_price": 600,
+                    "number": 20,
+                    "item_sku_id": 12928
+                },
+                {
+                    "image_url":"http://haiynoss.haiyn.com/images/20161008/15/20161008153639702.jpg",
+                    "item_id": 448,
+                    "item_name": "ZA姬芮多元水活化妆水/盈润 175ml",
+                    "item_sku_sn": "ZA0001",
+                    "sku_code": "",
+                    "seller_id": 1841254,
+                    "seckill_price": 100,
+                    "market_price": 600,
+                    "number": 20,
+                    "item_sku_id": 1255
+                }
+            ]
+        }
+    ]
+}

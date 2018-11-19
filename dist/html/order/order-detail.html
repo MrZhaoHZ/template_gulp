@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>订单详情</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+	<link href="//wxtest1.yyzws.com/libs/timeline/style.css" type="text/css" rel="stylesheet" />
+	<link href="//wxtest1.yyzws.com/css/order-detail.css?v=1.6.3" type="text/css" rel="stylesheet" />
+</head>
+<body class="Hd">
+	<div class="address" id="address-container">
+		<!-- <span class="logo"></span>
+		<div class="info">
+			<span>吕晓创</span>
+			<span>15968155124</span>
+			<span>浙江省 杭州市 下城区 东新路111号会号中心</span>
+		</div> -->
+	</div>
+	<!-- <div class="blk reason" style="display: none;" id="cancel-reason">
+		<span class="key">取消原因：</span>
+		<span class="value">下单人自行取消</span>
+	</div>
+	<div class="blk express" id="express-form" style="display: none;">
+		<div class="form-item">
+			<span class="key">物流公司：</span>
+			<span class="value">
+				<select name="" id="">
+					<option value="1">顺丰速运</option>
+					<option value="1">申通</option>
+					<option value="1">元通</option>
+				</select>
+			</span>
+		</div>
+		<div class="form-item">
+			<span class="key">物流单号：</span>
+			<span class="value">
+				<input type="text" placeholder="请输入物流单号">
+			</span>
+		</div>
+		<div class="send">
+			<span>发货</span>
+		</div>
+	</div> -->
+	<div id="order-goods">
+		<!-- <div class="title">待审单（上级发货）</div>
+		<div class="ctrl">
+			<img src="//wxtest1.yyzws.com/temp/img/goods.png" alt="">
+			<div class="about">
+				<p>韩束红石榴洁面乳</p>
+				<p class="guige">规格：盒</p>
+			</div>
+			<div class="price">
+				<p>￥12.00</p>
+				<p class="num">x1</p>
+			</div>
+		</div> -->
+	</div>
+<!-- 	<div class="process" id="order-process">
+		<p class="process_prompt">审核进度</p>
+		<section id="cd-timeline" class="cd-container">
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img cd-picture" style="background-color: #e0e0e0;"></div>
+				<div class="cd-timeline-content">
+					<p>
+						<span>总部：</span>
+						<span id="pending_audit">待审核</span>
+					</p>
+				</div>
+			</div>
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img cd-picture" style="background-color: #e0e0e0;"></div>
+				<div class="cd-timeline-content">
+					<p>
+						<span>新上级：</span>
+						<span id="pending_audit">胡小龙</span>
+					</p>
+					<p>
+						<span id="pending_audit">待审核</span>
+					</p>
+				</div>
+			</div>
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img cd-picture" style="background-color: #e0e0e0;"></div>
+				<div class="cd-timeline-content">
+					<p>
+						<span>原上级：</span>
+						<span id="pending_audit">胡小龙</span>
+					</p>
+					<p>
+						<span id="pending_audit">待审核</span>
+					</p>
+				</div>
+			</div>
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img cd-picture" style="background-color: #e0e0e0;"></div>
+				<div class="cd-timeline-content">
+					<p>
+						<span>提交成功：</span>
+						<span id="pending_audit">申请级别：</span>
+					</p>
+					<p>
+						<span>总部：</span>
+						<span id="pending_audit">待审核</span>
+					</p>
+				</div>
+			</div>
+		</section>
+	</div> -->
+	<div class="process" id="order-process">
+		<p class="title">订单流程</p>
+		<div class="process-step" id="process-step">
+			<!-- <section id="cd-timeline" class="cd-container"> -->
+				<!-- <div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-picture"></div>
+					<div class="cd-timeline-content">
+						<p class="detail">
+							<span class="name">总部</span>
+							<span class="status" id="head_state"></span>
+						</p>
+						<p class="time" id="time0"></p>
+					</div>
+				</div>
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-picture"></div>
+					<div class="cd-timeline-content">
+						<p class="detail">
+							<span class="name" id="superior"></span>
+							<span class="status" id="superior_state"></span>
+						</p>
+						<p class="time" id="time1"></p>
+					</div>
+				</div>
+				<div class="cd-timeline-block">
+					<div class="cd-timeline-img cd-picture"></div>
+					<div class="cd-timeline-content">
+						<p class="detail">
+							<span class="name">提交成功</span>
+						</p>
+						<p class="time" id="time2"></p>
+					</div>
+				</div> -->
+		<!-- </div> -->
+	</div>
+
+	<!-- <div class="blk" style="margin-top: 0.2rem;">
+		<span class="key">订单合计：</span>
+		<span class="value">￥159.00</span>
+	</div>
+	<div class="blk">
+		<span class="key">物流公司：</span>
+		<span class="value">顺风</span>
+	</div>
+	<div class="blk">
+		<span class="key">物流单号：</span>
+		<span class="value">12234234353454354356</span>
+	</div>
+	<div class="blk">
+		<span class="key">订单编号：</span>
+		<span class="value">12234234353454354356</span>
+	</div>
+	<div class="blk">
+		<span class="key">下单时间：</span>
+		<span class="value">2016-10-12 16:28:36</span>
+	</div> -->
+	<a class="center-home" href="../center.html?from=login"></a>
+	<script src="//wxtest1.yyzws.com/libs/zepto/zepto.min.js"></script>
+	<script src="//wxtest1.yyzws.com/libs/doT-master/doT.min.js"></script>
+	<script src="//wxtest1.yyzws.com/bundle/order-detail.js?v=1.6.3"></script>
+</body>
+</html>

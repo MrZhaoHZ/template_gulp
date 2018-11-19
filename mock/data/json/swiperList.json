@@ -1,0 +1,24 @@
+{
+  "code": 10000,
+  "msg": "请求处理成功",
+  "data": [
+    {
+      "id": 4,
+      "icon_name": "1213",
+      "icon_url": "../temp/img/swipe.png",
+      "icon_desc": ""
+    },
+    {
+      "id": 4,
+      "icon_name": "1213",
+      "icon_url": "../temp/img/swipe.png",
+      "icon_desc": ""
+    },
+    {
+      "id": 4,
+      "icon_name": "1213",
+      "icon_url": "../temp/img/swipe.png",
+      "icon_desc": ""
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<link rel="icon" href="@static_path/favicon.ico">
+	<title>登录密码重置</title>
+	<link href="@static_path/css/reset-pwd.css?v=@version" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="container Hd">
+	<div class="phone-input">
+		<span class="phone">
+			
+		</span>
+		<input type="text" placeholder="请输入手机号" maxlength="11" id="phoneNum" style="background-color: #fff;"/>
+	</div>
+	<div class="valicode-input">
+		<div class="whole">
+			<span class="lock"></span>
+			<input type="text" placeholder="请输入验证码" maxlength="6" id="valicode">
+			<span class="code-btn" id="get-valicode">获取验证码</span>
+			<span class="time-left" id="time-left" style="display: none;"></span>
+		</div>
+	</div>
+	<div class="pwd-input">
+		<div class="whole">
+			<span class="lock"></span>
+			<input type="password" placeholder="请输入新密码" maxlength="15" id="password">
+		</div>
+	</div>
+	<div class="div_we_chat" style="display: none;">
+		<div class="whole">
+			<span class="lock"></span>
+			<input placeholder="请输入微信号" maxlength="15" id="weChat">
+		</div>
+	</div>
+	<div class="tips">
+		<div class="whole">
+			<span id="finish-tips">&nbsp;</span>
+		</div>
+	</div>
+	<div class="login" id="finish-reset">
+		完成
+	</div>
+</div>
+<script src="@static_path/libs/zepto/zepto.min.js"></script>
+<script src="@static_path/libs/md5/md5.min.js"></script>
+<script src="@static_path/libs/layer-mobile/layer.js"></script>
+<script src="@static_path/bundle/reset-pwd.js?v=@version"></script>
+<!-- <script src="http://192.168.8.137:8080/target/target-script-min.js#anonymous"></script> -->
+</body>
+</html>

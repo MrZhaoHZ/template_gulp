@@ -1,0 +1,45 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "data": {
+        "data": [
+            {
+                "id": 4,
+                "seller_id": 1841254,
+                "biz_code": "hanshu",
+                "delete_mark": 0,
+                "gmt_created": "2016-07-02 11:45:57",
+                "gmt_modified": "2016-07-02 12:03:04",
+                "label_name": "PICC承保",
+                "label_desc": "保障商品正品，保障商品质量，保障售后服务。",
+                "icon_url": "http://haiynoss.haiyn.com/images/20160702/12/20160702120303425.png@1e_60w_60h_1c_0i_1o_90Q_1x.png",
+                "scope": 1
+            },
+            {
+                "id": 5,
+                "seller_id": 1841254,
+                "biz_code": "hanshu",
+                "delete_mark": 0,
+                "gmt_created": "2016-07-02 11:47:09",
+                "gmt_modified": "2016-07-02 18:00:40",
+                "label_name": "全场包邮",
+                "label_desc": "在售商品全国包邮，港澳台除外。",
+                "icon_url": "http://haiynoss.haiyn.com/images/20160702/18/20160702180038973.png@1e_60w_60h_1c_0i_1o_90Q_1x.png",
+                "scope": 1
+            },
+            {
+                "id": 6,
+                "seller_id": 1841254,
+                "biz_code": "hanshu",
+                "delete_mark": 0,
+                "gmt_created": "2016-07-02 11:48:42",
+                "gmt_modified": "2016-07-02 12:03:47",
+                "label_name": "7天退换",
+                "label_desc": "保证商品不影响二次售卖的情况下，7天无理由退换（商品运输途中破损除外）",
+                "icon_url": "http://haiynoss.haiyn.com/images/20160702/12/20160702120346969.png@1e_60w_60h_1c_0i_1o_90Q_1x.png",
+                "scope": 1
+            }
+        ],
+        "total_count": 3
+    }
+}

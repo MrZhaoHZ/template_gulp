@@ -1,0 +1,39 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "length": "100",
+    "data": [
+        {
+            "id": "3",
+            "level": "督导",
+            "name": "huxiaolong",
+            "load": "1112.00",
+            "team_num": "1112.00",
+            "num": "55"
+        },
+         {
+            "id": "3",
+            "level": "督导",
+            "name": "huxiaolong",
+            "load": "1112.00",
+            "team_num": "1112.00",
+            "num": "55"
+        },
+         {
+            "id": "3",
+            "level": "督导",
+            "name": "huxiaolong",
+            "load": "1112.00",
+            "team_num": "1112.00",
+            "num": "55"
+        },
+         {
+            "id": "3",
+            "level": "督导",
+            "name": "huxiaolong",
+            "load": "1112.00",
+            "team_num": "1112.00",
+            "num": "55"
+        }
+    ]
+}

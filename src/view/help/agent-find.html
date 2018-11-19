@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<link href="@static_path/libs/bootstrap-3.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="@static_path/css/mobile-style.css?v=@version" type="text/css" rel="stylesheet" />
+	 <!-- <script  type="text/javascript"  src="/template/usertpl/leaf/assets/js/jquery-2.1.3.min.js?v=1491465964"></script> -->
+	<link rel="Shortcut Icon" href="../../images/help/favicon.png">
+	<title>一叶子微商</title>
+	<style>
+		#result-container p {
+			display: block;
+			padding-left: 3px;
+			color: #333;
+		}
+	</style>
+</head>
+
+<body class="leaf-artcat bg_color">
+<input type='hidden' name='referer' value="http://m.yyzws.com/leaf/help.html?hv=1" >
+<header class="personal_center_header">
+	<div>
+		<a data-wait="disabled" href="javascript:history.back(1)" style="float: left;">
+			<i><img src="../../images/help/1_03.png" alt="" /></i>
+			<p>代理商授权查询</p>
+		</a>
+		<img onclick="location.href='../center.html?from=login'" src="../../images/help/1_03.gif" alt=""/>
+	</div>
+</header>
+<article class="artcat_article">
+	<div class="artcat_div">
+		<img src="../../images/help/leaf/20170423104353.jpg" alt="" />
+	</div>
+	<!-- <ul class="artcat_ul">
+		<li>
+			<a href="../article.html?id=26">
+				<strong>有意向上级时如何申请代理？</strong>
+				<small><img src="../../images/help/icon_right.png"></small>
+			</a>
+		</li>
+		<li>
+			<a href="../article.html?id=25">
+				<strong>没有意向上级时如何申请代理？</strong>
+				<small><img src="../../images/help/icon_right.png"></small>
+			</a>
+		</li>
+	</ul> -->
+	<div class="search-container">
+		<span>请填写代理商信息</span>
+		<div style="margin: 5px 0;">
+			<span style="display: inline-block;width: 20%;">手机号：</span>
+			<input type="text" style="width: 75%;" placeholder="请输入手机号" id="keyword">
+		</div>
+		<!-- <div class="search-btn" id="search-btn" style="text-align: center;background: #66C300;color: #fff;padding: 5px 0;">
+			查询
+		</div> -->
+		<div class="search-btn" id="search-btn" style="text-align: center;background: #66C300;color: #fff;padding: 5px 0;">
+			查询
+		</div>
+		<!-- <div class="search-result" id="search-result" style="display:none;text-align: center;background: #66C300;color: #fff;margin:5px 0;padding: 5px 0;">
+			查询结果
+		</div> -->
+		<div class="search-result" id="search-result" style="display:none;text-align: center;background: #F4F4F4;margin:5px 0;padding: 5px 0;">
+			查询结果
+		</div>
+		<div id="result-container">
+			<!-- <p>授权级别：</p>
+			<p>姓名：</p>
+			<p>授权编号：</p>
+			<p>状态：</p> -->
+		</div>
+	</div>
+</article>
+	<script src="@static_path/libs/zepto/zepto.min.js"></script>
+	<script src="@static_path/libs/doT-master/doT.min.js"></script>
+	<script src="@static_path/bundle/agent-find.js?v=@version"></script>
+</body>
+</html>
+

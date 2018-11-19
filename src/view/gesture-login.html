@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<link rel="icon" href="@static_path/favicon.ico">
+	<title>手势登录</title>
+	<link href="@static_path/css/gesture-login.css?v=@version" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<div class="container">
+	<!-- <img class="user-pic" src="" alt="" id="userLogo"> -->
+	<span id="userLogo" class="user-pic" style="display:inline-block;border-radius:70px;width:70px;height:70px;background-size: contain;"></span>
+	<div id="patternContainer" class="patternextra"></div>
+	<div class="login-method">
+		<a href="#" class="handpattern" id="go-wx-login">密码登录</a>
+		<a href="#" class="forger-pwd" id="forger-pwd">忘记手势密码?</a>
+	</div>
+</div>
+<script src="@static_path/libs/jquery/jquery-1.10.2.js"></script>
+<script src="@static_path/libs/pattern-lock/patternLock.min.js"></script>
+<script src="@static_path/libs/md5/md5.min.js"></script>
+<script src="@static_path/libs/layer-mobile/layer.js"></script>
+<script src="@static_path/bundle/gesture-login.js?v=@version"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "data": {
+        "data": [
+            {
+                "id": 8,
+                "icon_name": "满就送",
+                "icon_url": "http://haiynoss.haiyn.com/images/20160815/09/20160815094046931.png",
+                "icon_desc": ""
+            },
+            {
+                "id": 9,
+                "icon_name": "99双双节角标",
+                "icon_url": "http://haiynoss.haiyn.com/images/20160908/23/20160908232145510.png",
+                "icon_desc": ""
+            },
+            {
+                "id": 10,
+                "icon_name": "角标",
+                "icon_url": "http://haiynoss.haiyn.com/images/20161019/14/20161019145848709.jpg",
+                "icon_desc": "角标"
+            }
+        ],
+        "total_count": 3
+    }
+}

@@ -1,0 +1,51 @@
+{
+	"code": 10000,
+	"msg": "请求处理成功",
+	"data": {
+		"bookName": "一叶子",
+		"bookImg": "../../temp/img/book.jpg",
+		"list": [{
+			"id": "3",
+			"type": "title",
+			"name": "授权编号",
+			"fontFamily": "2",
+			"fontSize": "14",
+			"color": "#ffffff",
+			"pc_left": "34.98483316481294%",
+			"pc_top": "30.25%",
+			"mobile_left": "43.25%",
+			"mobile_top": "30.25%"
+		}, {
+			"id": "4",
+			"type": "title",
+			"name": "姓名",
+			"fontFamily": "3",
+			"fontSize": "14",
+			"color": "#333333",
+			"pc_left": "33.367037411526795%",
+			"pc_top": "37.75%",
+			"mobile_left": "41.25%",
+			"mobile_top": "37.75%"
+		}, {
+			"id": "5",
+			"type": "title",
+			"fontFamily": "3",
+			"fontSize": "14",
+			"color": "#333333",
+			"pc_left": "32.153690596562186%",
+			"pc_top": "43.5%",
+			"mobile_left": "39.75%",
+			"mobile_top": "43.5%"
+		}, {
+			"id": "6",
+			"type": "title",
+			"fontFamily": "3",
+			"fontSize": "18",
+			"color": "#333333",
+			"pc_left": "51.66835187057634%",
+			"pc_top": "77.5%",
+			"mobile_left": "63.875%",
+			"mobile_top": "77.5%"
+		}]
+	}
+}

@@ -1,0 +1,63 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "data": {
+        "data": [
+            {
+                "icon_url": "http://haiynoss.haiyn.com/images/20160926/17/20160926171629288.jpg",
+                "item_name": "zhj宝宝湿巾",
+                "category_name": "湿巾",
+                "promotion_price": 1,
+                "item_uid": "1841254_3498",
+                "end_time": "2016-09-26 17:33:42",
+                "status_name": "上架"
+            },
+            {
+                "icon_url": "http://haiynoss.haiyn.com/images/20160926/17/20160926171629288.jpg",
+                "item_name": "zhj宝宝湿巾",
+                 "category_name": "湿巾",
+                "promotion_price": 1,
+                "item_uid": "1841254_3498",
+                "end_time": "2016-09-26 17:33:42",
+                "status_name": "上架"
+            },
+            {
+                "icon_url": "http://haiynoss.haiyn.com/images/20160926/17/20160926171629288.jpg",
+                "item_name": "zhj宝宝湿巾",
+                 "category_name": "湿巾",
+                "promotion_price": 1,
+                "item_uid": "1841254_3498",
+                "end_time": "2016-09-26 17:33:42",
+                "status_name": "上架"
+            },
+            {
+                "icon_url": "http://haiynoss.haiyn.com/images/20160926/17/20160926171629288.jpg",
+                "item_name": "zhj宝宝湿巾",
+                 "category_name": "湿巾",
+                "promotion_price": 1,
+                "item_uid": "1841254_3498",
+                "end_time": "2016-09-26 17:33:42",
+                "status_name": "上架"
+            },
+            {
+                "icon_url": "http://haiynoss.haiyn.com/images/20160926/17/20160926171629288.jpg",
+                "item_name": "zhj宝宝湿巾",
+                 "category_name": "湿巾",
+                "promotion_price": 1,
+                "item_uid": "1841254_3498",
+                "end_time": "2016-09-26 17:33:42",
+                "status_name": "上架"
+            },
+            {
+                "icon_url": "http://haiynoss.haiyn.com/images/20160926/17/20160926171629288.jpg",
+                "item_name": "zhj宝宝湿巾",
+                 "category_name": "湿巾",
+                "promotion_price": 1,
+                "item_uid": "1841254_3498",
+                "end_time": "2016-09-26 17:33:42",
+                "status_name": "上架"
+            }
+        ],
+        "total_count": 2011
+    }
+}

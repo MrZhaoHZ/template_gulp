@@ -1,0 +1,41 @@
+{
+  "code": 10000,
+  "msg": "请求处理成功",
+   "total_count": "2",
+  "data": [
+    {
+      "page_type": 1,
+      "page_id": 1,
+      "page_name": "推荐",
+      "status": 0,
+      "operate_time": "2016-11-16 23:10:10"
+    },
+    {
+      "page_type": 1,
+      "page_id": 2,
+      "page_name": "基础护肤",
+      "status": 0,
+      "operate_time": "2016-11-16 23:10:10"
+    },
+    {
+      "page_type": 1,
+      "page_id": 3,
+      "page_name": "个人护理",
+      "status": 0
+    },
+    {
+      "page_type": 1,
+      "page_id": 4,
+      "page_name": "母婴",
+      "status": 0,
+      "operate_time": "2016-11-16 23:10:10"
+    },
+    {
+      "page_type": 2,
+      "page_id": 5,
+      "page_name": "购物节",
+      "status": 0,
+      "operate_time": "2016-11-16 23:10:10"
+    }
+  ]
+}

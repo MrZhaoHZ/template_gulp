@@ -1,0 +1,51 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "data": {
+        "data": {
+            "cate_name": "商品分类",
+            "good_name": "商品名",
+            "sale_info": "促销消息",
+            "brand_name": "三本",
+            "band_goods": [
+                {
+                    "item_id": "3576",
+                    "price": "9",
+                    "img": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+                    "item_name": "name",
+                    "item_sku_id": "21685",
+                    "item_sku_sn": "HKJHJJ",
+                    "market_price": "11.00",
+                    "seller_id": "1841254",
+                    "sku_code": "默认"
+                },
+                {
+                    "price": "9",
+                    "img": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+                    "item_id": "3576",
+                    "item_name": "name",
+                    "item_sku_id": "21685",
+                    "item_sku_sn": "HKJHJJ",
+                    "market_price": "11.00",
+                    "seller_id": "1841254",
+                    "sku_code": "默认"
+                }
+            ],
+            "icon_img": {
+                "icon_id": 9,
+                "link": "http://haiynoss.haiyn.com/images/20160815/09/20160815094046931.png"
+            },
+            "label_img": [
+                {
+                    "icon_id": 9,
+                    "link": "http://haiynoss.haiyn.com/images/20160815/09/20160815094046931.png"
+                },
+                {
+                    "icon_id": 9,
+                    "link": "http://haiynoss.haiyn.com/images/20160815/09/20160815094046931.png"
+                }
+            ]
+        },
+        "total_count": 3
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <link rel="icon" href="@static_path/favicon.ico">
+    <title>图片</title>
+    <link href="@static_path/libs/larea/LArea.min.css" type="text/css" rel="stylesheet" />
+    <link href="@static_2_path/css/dele-register-basic.css?v=@version" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="Hd">
+    <div class="container">
+        <form>
+            <div class="content" value="">
+                <p>
+                    <span class="justify">姓名</span>
+                    <span class="colon">:</span>
+                    <input placeholder="请输入真实姓名" maxlength="25" id="name" />
+                </p>
+                <p>
+                    <span class="justify">手机号</span>
+                    <span class="colon">:</span>
+                    <input placeholder="请输入手机号" maxlength="11" id="phone" />
+                </p>
+                <p style="height: 60px;">
+                    <span class="justify">留言</span>
+                    <span class="colon">:</span>
+                    <textarea placeholder="" id="liuyan" style="vertical-align: top;height: 55px;width: 4rem;margin-left: 10px;padding: 3px;
+"></textarea>
+                </p>
+            </div>
+            <div class="up-load-id id_div">
+                <div class="id-img">
+                    <div class="id-left" id="upload-up">
+                        <div class="img-container">
+                            <img src="@static_path/images/upload.png" alt="" style="width: 100%;height: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <p class="reuploader" id="reuploader_id">重新上传</p>
+            </div>
+            <div class="up-load-id money_div">
+                <div class="id-img">
+                    <div class="id-left" id="upload-down1">
+                        <div class="img-container">
+                            <img src="@static_path/images/upload.png" alt="" style="width: 100%;height: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <p class="reuploader" id="reuploader_voncher">重新上传</p>
+            </div>
+            <div class="up-load-id money_div">
+                <div class="id-img">
+                    <div class="id-left" id="upload-down2">
+                        <div class="img-container">
+                            <img src="@static_path/images/upload.png" alt="" style="width: 100%;height: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <p class="reuploader" id="reuploader_voncher">重新上传</p>
+            </div>
+        </form>
+        <div class="next-div">
+            <div class="next" id="next">提交</div>
+        </div>
+    </div>
+    <!-- <script src="@static_path/libs/zepto/zepto.min.js"></script> -->
+    <script src="@static_path/libs/jquery/jquery-1.10.2.js"></script>
+    <script src="@static_path/libs/RSA/RSA.min.js"></script>
+    <script src="@static_path/libs/md5/md5.min.js"></script>
+    <script src="@static_path/libs/webuploader-0.1.5/webuploader.min.js"></script>
+    <script src="@static_2_path/bundle/submitImage.js?v=@version"></script>
+    <script src="@static_path/libs/layer-mobile/layer.js"></script>
+</body>
+
+</html>

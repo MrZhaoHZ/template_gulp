@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<link rel="icon" href="//wxtest1.yyzws.com/favicon.ico">
+	<title>审核详情</title>
+	<link href="//wxtest1.yyzws.com/libs/html5-time/css/mobiscroll.custom-2.6.2.min.css" rel="stylesheet" type="text/css" />
+	<link href="//wxtest1.yyzws.com/css/team-upgrade-examine.css?v=1.6.3" type="text/css" rel="stylesheet" />
+</head>
+<body class="Hd">
+<div class="container">
+	<div class="current_payment">
+		<span>状态：</span>
+		<span id="status" style="width: auto;"></span>
+		<span id="time" style="padding: 0.14rem 0"></span>
+		<p class="reason hidde">
+			<span id="refuse" class="reason_content"></span>
+		</p>
+	</div>
+	<div class="authorize_info">
+		<p class="top_title">升级信息</p>
+		<p class="basic_info">
+			<span class="span_left">姓名：</span>
+			<span  id="up_name"class="span_right"></span>
+		</p>
+		<p class="basic_info">
+			<span class="span_left">当前等级：</span>
+			<span id="up_old_level" class="span_right"></span>
+		</p>
+		<p class="basic_info">
+			<span class="span_left">申请等级：</span>
+			<span id="up_new_level" class="span_right"></span>
+		</p>
+	</div>
+	<div class="authorize_info">
+		<p class="top_title">原上级</p>
+		<p class="basic_info">
+			<span class="span_left">姓名：</span>
+			<span id="old_name" class="span_right"></span>
+		</p>
+		<p class="basic_info">
+			<span class="span_left">等级：</span>
+			<span id="old_old_level" class="span_right"></span>
+		</p>
+		<p class="basic_info">
+			<span class="span_left">手机号：</span>
+			<span id="old_mobile" class="span_right"></span>
+		</p>
+	</div>
+	<div class="authorize_info">
+		<p class="top_title">新上级</p>
+		<p class="basic_info">
+			<span class="span_left">姓名：</span>
+			<span id="new_name" class="span_right"></span>
+		</p>
+		<p class="basic_info">
+			<span class="span_left">等级：</span>
+			<span id="new_old_level" class="span_right"></span>
+		</p>
+		<p class="basic_info">
+			<span class="span_left">手机号：</span>
+			<span id="new_mobile" class="span_right"></span>
+		</p>
+	</div>
+	<div class="money_div">
+		<p class="top_title">
+			<span>升级金额：</span>
+			<span id="money"></span>
+		</p>
+	</div>
+	<div class="money_info">
+		<div class="div_img">
+			<img id="money_pic" class="click_img"/>
+			<div class="img_box">
+				<p>请确认升级金额，审核通过后代理可通过授权金额进行系统下单； </p>
+				<span>（点击图片查看大图）</span>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="money_info">
+		<p class="top_title">
+			<span>身份证号：</span>
+			<span id="personId"></span>
+		</p>
+		<div class="div_img">
+			<img id="personId_pic" class="click_img"/>
+			<div class="img_box">
+				<p>请确认上传身证号码和姓名与提交信息一至，非一至请拒绝后重新提交；</p>
+				<span>（点击图片查看大图）</span>
+			</div>
+		</div>
+	</div> -->
+	<!-- <div class="money_info">
+		<p class="top_title">
+			<span>下单合计：</span>
+			<span id="heji"></span>
+		</p>
+	</di -->
+	<div class="next-div hidde">
+		<div id="nopass-btn" class="next">拒绝申请</div>
+		<div id="pass" class="next">审核通过</div>
+	</div>
+</div>
+
+
+<div id="search-layer" class="search-layer">
+	<p class="search-title"><span>拒绝原因</span><span class="search-layer-close
+	"></span></p>
+	<textarea placeholder="请输入拒绝原因" class="text" id="text"></textarea>
+	<p class="tool"><span class="search-now" id="search-now">确认</span></p>
+</div>
+<div class="click_img_box">
+	<img  />
+</div>
+<script src="//wxtest1.yyzws.com/libs/zepto/zepto.min.js"></script>
+<script src="//wxtest1.yyzws.com/bundle/team-upgrade-examine.js?v=1.6.3"></script>
+<script src="//wxtest1.yyzws.com/libs/layer-mobile/layer.js"></script>
+</body>
+</html>

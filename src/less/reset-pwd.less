@@ -1,0 +1,174 @@
+@import "_func";
+@import "_reset";
+@import "_utils";
+@import "_var";
+body {
+	// width: 7.5rem;
+	.body-setting();
+}
+.container {
+	padding-top: 1.5rem;
+	// text-align: center;
+	.user-pic {
+		width: 1.45rem;
+		height: 1.45rem;
+	}
+	.phone-input {
+		margin: 0 auto;
+		padding-bottom: 0.24rem;
+		width: 71%;
+		border-bottom: 1px solid #cccccc;
+		line-height: 0.5rem;
+		.phone {
+			display: inline-block;
+			width: 0.28rem;
+			height: 0.42rem;
+			background-image: url(@phoneno-input);
+			background-size: contain;
+			// background-size: 0.28rem 0.42rem;
+			// line-height: 0.5rem;
+			vertical-align: middle;
+		}
+		input {
+			// padding: 0.1rem 0;
+			border: none;
+			// line-height: 0.5rem;
+			vertical-align: middle;
+			min-width: 50%;
+		}
+	}
+	.pwd-input {
+		margin: 0.5rem auto 0 auto;
+		padding-bottom: 0.24rem;
+		width: 71%;
+		border-bottom: 1px solid #cccccc;
+		line-height: 0.5rem;
+		.lock {
+			display: inline-block;
+			width: 0.28rem;
+			height: 0.32rem;
+			background-image: url(@password-input-lock);
+			background-size: contain;
+			// background-size: 0.28rem 0.32rem;
+			vertical-align: middle;
+		}
+		input {
+			border: none;
+			vertical-align: middle;
+			width: 80%;
+		}
+	}
+	.div_we_chat {
+        margin: 0.5rem auto 0 auto;
+        padding-bottom: 0.24rem;
+        width: 71%;
+        border-bottom: 1px solid #cccccc;
+        line-height: 0.5rem;
+        .lock {
+            display: inline-block;
+            width: 0.28rem;
+            height: 0.32rem;
+            background-image: url(@reset_pwd_weChat_icon);
+            background-size: contain;
+            // background-size: 0.28rem 0.32rem;
+            vertical-align: middle;
+        }
+        input {
+            border: none;
+            vertical-align: middle;
+            width: 80%;
+        }
+    }
+	.tips {
+		margin: 0 auto 0 auto;
+		// padding-bottom: 0.24rem;
+		width: 71%;
+		// border-bottom: 1px solid #cccccc;
+		line-height: 0.5rem;
+		.whole {
+			span {
+				// display: inline-block;
+				// padding: 0 5px;
+				// width: 20px;
+				// height: 20px;
+				// border-radius: 10px;
+				// background: red;
+				color: red;
+				font-size: 14px;
+			}
+		}
+	}
+	.valicode-input {
+		margin: 0.5rem auto 0 auto;
+		padding-bottom: 0.24rem;
+		width: 71%;
+		border-bottom: 1px solid #cccccc;
+		line-height: 0.5rem;
+		.whole{
+			position: relative;
+
+		}
+		.lock {
+			display: inline-block;
+			width: 0.3rem;
+			height: 0.36rem;
+			background-image: url(@valicode-input);
+			background-size: cover;
+			// background-size: 0.3rem 0.36rem;
+			vertical-align: middle;
+		}
+		input {
+			// width: 3rem;
+			width: 55%;
+			padding: 0.02rem 0;
+			border: none;
+			vertical-align: middle;
+		}
+		.code-btn {
+			// position: absolute;
+			// right: 0;
+			// top: 5px;
+			// float: right;
+			display: inline-block;
+			padding: 0.02rem 0;
+			color: #66c300;
+			font-size: 0.28rem;
+			vertical-align: middle;
+		}
+		.time-left {
+			display: inline-block;
+			// padding: 0.02rem 0.5rem;
+			padding: 0.02rem 0.5rem;
+			border-radius: 5px;
+			background: #EBEBEB;
+			color: #000000;
+			font-size: 0.28rem;
+			vertical-align: middle;
+		}
+	}
+	.login {
+		margin: 0.5rem auto 0.4rem auto;
+		padding: 0.25rem 0;
+		width: 71%;
+		background: #66c300;
+		font-size: 0.32rem;
+		color: #fff;
+		border-radius: 5px;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+	.login-method {
+		margin: 0 auto;
+		width: 71%;
+		font-size: 0.26rem;
+		a {
+			color: #4d4d4d;
+		}
+		.handpattern {
+			float: left;
+		}
+		.forger-pwd {
+			float: right;
+		}
+	}
+}

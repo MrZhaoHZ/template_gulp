@@ -1,0 +1,21 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "length": "100",
+    "data": [
+        {
+            "status": "待审核",
+            "time": "2012-12-12 12-12-12",
+            "refuse": "打款金额与授权金额不一致",
+            "name": "吕晓创",
+            "for_level": "二级代理",
+            "weChat": "22233566441",
+            "phone": "15011423467",
+            "address": "浙江省 杭州市 下城区东新路1118号兰通财富中心",
+            "money": "100.00",
+            "money_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_id": "37152219912255555",
+            "user_id_pic": "http://www.qqju.com/pic/tx/tx18037.jpg"
+        }
+    ]
+}

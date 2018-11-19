@@ -1,0 +1,125 @@
+// {  
+//     "success" : true,
+//     "userInfo" : {
+//         "name": "young man。。",
+//         "age": 32,
+//         "sex": "Men"
+//     }
+// }
+{
+  "code": 10000,
+  "msg": "请求处理成功",
+  "data": {
+    "item_id": 3087,
+    "higo_mark": 0,
+    "skus": [
+      {
+        "id": 21036,
+        "promotion_price": 9900,
+        "market_price": 16800,
+        "repo_infos": [
+          {
+            "id": 14537,
+            "repo_id": 15,
+            "repo_name": "广东四号仓LALPINA",
+            "supplier_name": "广州奢立贸易有限公司",
+            "supplier_id": 16,
+            "type": 0,
+            "level": 1,
+            "stock": 237,
+            "frozen_stock": 0,
+            "available_stock": 237,
+            "repo_status": 1,
+            "bar_code": "661082066012"
+          }
+        ]
+      },
+      {
+        "id": 21037,
+        "promotion_price": 9900,
+        "market_price": 16800,
+        "repo_infos": [
+          {
+            "id": 14538,
+            "repo_id": 15,
+            "repo_name": "广东四号仓LALPINA",
+            "supplier_name": "广州奢立贸易有限公司",
+            "supplier_id": 16,
+            "type": 0,
+            "level": 1,
+            "stock": 257,
+            "frozen_stock": 0,
+            "available_stock": 257,
+            "repo_status": 1,
+            "bar_code": "661082066013"
+          }
+        ]
+      },
+      {
+        "id": 21038,
+        "promotion_price": 9900,
+        "market_price": 16800,
+        "repo_infos": [
+          {
+            "id": 14539,
+            "repo_id": 15,
+            "repo_name": "广东四号仓LALPINA",
+            "supplier_name": "广州奢立贸易有限公司",
+            "supplier_id": 16,
+            "type": 0,
+            "level": 1,
+            "stock": 277,
+            "frozen_stock": 0,
+            "available_stock": 277,
+            "repo_status": 1,
+            "bar_code": "661082066014"
+          }
+        ]
+      },
+      {
+        "id": 21039,
+        "promotion_price": 9900,
+        "market_price": 16800,
+        "repo_infos": [
+          {
+            "id": 14540,
+            "repo_id": 15,
+            "repo_name": "广东四号仓LALPINA",
+            "supplier_name": "广州奢立贸易有限公司",
+            "supplier_id": 16,
+            "type": 0,
+            "level": 1,
+            "stock": 149,
+            "frozen_stock": 0,
+            "available_stock": 149,
+            "repo_status": 1,
+            "bar_code": "661082066015"
+          }
+        ]
+      },
+      {
+        "id": 21040,
+        "promotion_price": 9900,
+        "market_price": 16800,
+        "repo_infos": [
+          {
+            "id": 14541,
+            "repo_id": 15,
+            "repo_name": "广东四号仓LALPINA",
+            "supplier_name": "广州奢立贸易有限公司",
+            "supplier_id": 16,
+            "type": 0,
+            "level": 1,
+            "stock": 0,
+            "frozen_stock": 0,
+            "available_stock": 0,
+            "repo_status": 1,
+            "bar_code": "000"
+          }
+        ]
+      }
+    ],
+    "sale_begin": "2016-09-24 13:24:43",
+    "item_status": 4
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "code": 10000,
+  "msg": "请求处理成功",
+  "data": {
+    "new_seller_warn": 0,
+    "skus": [
+      {
+        "sku_id": 21685,
+        "item_sku_sn": "HJIIHIJH",
+        "prop": [
+          {
+            "prop_id": "0",
+            
+            "prop_name": "",
+            "value_id": "666",
+            "value_name": ""
+          }
+        ],
+        "origin_price": "1100",
+        "price": "1000",
+        "num": "1",
+        "frozen_num": "0",
+        "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+        "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+        "sku_code": "默认"
+      },
+      {
+        "sku_id": 21684,
+        "item_sku_sn": "HJIIHIJH",
+        "prop": [
+          {
+            "prop_id": "0",
+            "prop_name": "",
+            
+            "value_id": "666",
+            "value_name": ""
+          }
+        ],
+        "origin_price": "1100",
+        "price": "1000",
+        "num": "1",
+        "frozen_num": "0",
+        "image_url": "http://haiynoss.haiyn.com/images/20161010/10/20161010104643353.jpg",
+        "sku_url": "http://mtest.haiyn.com/order-confirm-direct.html?sku_uid=1841254_21684",
+        "sku_code": "默认"
+      }
+    ]
+  }
+}

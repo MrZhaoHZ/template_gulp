@@ -1,0 +1,148 @@
+@import "_func";
+@import "_reset";
+@import "_utils";
+@import "_var";
+body {
+	// padding-top: 130px;
+	.body-setting();
+	background: #F2F2F2;
+}
+.blk {
+	padding: 0.2rem;
+	line-height: 0.5rem;
+	font-size: 14px;
+	background: #fff;
+	overflow-y: hidden;
+	border-bottom: 0.5px solid #E4E4E4;
+	border-top: 0.5px solid #E4E4E4;
+	span:nth-child(1){
+		float: left;
+	}
+	span:nth-child(2){
+		float: right;
+	}
+	a.blk-a{
+		float: right;
+		color: gray;
+	}
+	span {
+		display: inline-block;
+	}
+	.gray {
+		color: gray;
+	}
+}
+.blk:nth-child(1),.blk:nth-child(3),.blk:nth-child(5){
+	margin-bottom: 10px;
+}
+.blk:nth-child(2),.blk:nth-child(4),.blk:nth-child(6){
+	border-bottom: none;
+}
+.main {
+	margin-top: 10px;
+	text-align: center;
+	color: #FF0033;
+}
+.layer-close{  
+	background:#333;  
+	font-size: 12px;  
+	position:absolute;  
+	right:-8px;  
+	top:-8px;  
+	border-radius:50%;  
+	width:20px;  
+	height:20px;  
+	line-height:20px;  
+	border: solid 1px #FFF;  
+	text-align: center;  
+	color: #FFF;  
+	z-index: 1000;  
+}
+.layui-m-layercont {
+	p {
+		text-align: left;
+	}
+}
+.layui-m-layerbtn span {
+    background: #66C300;
+}
+.layer-mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // padding: 0.15rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    z-index: 999;
+}
+.myup-layer {
+    position: fixed;
+    display: none;
+    padding: 10px;
+    width: 75%;
+    max-width: 750px;
+    background: #fff;
+    z-index: 1000;
+    border-radius: 5px;
+    p {
+        margin: 15px 0;
+        padding: 0 15px;
+        // width: 75%;
+        font-size:14px;
+        text-align: left;
+        color: #4d4d4d;
+        &.tool {
+            text-align: center;
+            margin: 0 0;
+        }
+        select {
+            padding-left: 5px;
+            border-radius:5px;
+        }
+        input,select {
+            width: 3.6rem;
+            line-height: 25px;
+            height: 25px;
+            border-color: #cccccc;
+        }
+        input {
+            border-width: 1px;
+        }
+        // span {
+        //     display: inline-block;
+        //     width: 1.8rem;
+        // }
+    }
+    .myup-title {
+        margin-top: 0;
+        position: relative;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        
+    }
+    .myup-layer-close {
+        position: absolute;
+        background: url(@search-layer-close) no-repeat 0 0;
+        width: 16px;
+        height: 16px;
+        background-size: contain;
+        top: 0;
+        right: 0;
+    }
+    .myup-now {
+        display: inline-block;
+        // margin: 0 auto;
+        margin: 10px 0;
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+        background: #66c300;
+    }
+}
+

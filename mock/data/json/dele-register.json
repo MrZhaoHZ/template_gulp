@@ -1,0 +1,8 @@
+{
+	"code": 10000,
+	"msg": "请求处理成功",
+	"data": {
+		"level": ["slide1", "slide2", "slide3", "slide4", "slide5"],
+		"data": [1,2,3,4,5]
+	}
+}

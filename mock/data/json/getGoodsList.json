@@ -1,0 +1,97 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "data": {
+        "data": [
+            {
+                "id": 3586,
+                "item_uid": "1841254_3586",
+                "item_name": "自然堂测试商品",
+                "item_brief": "",
+                "seller_id": 1841254,
+                "item_brand_id": 400,
+                "item_type": 1,
+                "icon_url": "http://haiynoss.haiyn.com/images/20161013/13/20161013132750253.jpg",
+                "category_id": 95,
+                "market_price": 19900,
+                "promotion_price": 13900,
+                "wireless_price": 13900,
+                "sale_begin": "2016-10-20 09:44:36",
+                "sale_min_num": 1,
+                "item_status": 4,
+                "virtual_mark": 0,
+                "stock_status": 2,
+                "sale_commission": 0,
+                "delete_mark": 0,
+                "gmt_created": "2016-10-14 01:28:08",
+                "gmt_modified": "2016-10-25 03:06:16",
+                "item_desc": "<p><img src=\"http://haiynoss.haiyn.com/images/20161024/14/20161024145733756.png\" title=\"正在上传...\"/><img src=\"http://haiynoss.haiyn.com/images/20161024/14/20161024145743773.png\" title=\"正在上传...\"/><img src=\"http://haiynoss.haiyn.com/images/20161013/13/20161013132750253.jpg\" title=\"正在上传...\"/></p>",
+                "desc_tmpl_id": 0,
+                "higo_mark": 1,
+                "category_name": "母婴用品",
+                "create_time": "2016-10-14 01:28:08",
+                "status_name": "上架",
+                "biz_code": "hanshu",
+                "freight": 0,
+                "stock_num": 0,
+                "frozen_stock_num": 0,
+                "biz_tag": 0,
+                "sku_list": [
+                    {
+                        "id": 21693,
+                        "item_id": 3586,
+                        "sku_code": "",
+                        "stock_num": 1000,
+                        "frozen_stock_num": 0,
+                        "promotion_price": 13900,
+                        "market_price": 19900
+                    }
+                ]
+            },
+            {
+                "id": 3627,
+                "item_uid": "1841254_3627",
+                "item_name": "哈哈测试秒杀商品1",
+                "item_brief": "",
+                "seller_id": 1841254,
+                "item_type": 1,
+                "icon_url": "http://haiynoss.haiyn.com/images/20161018/22/20161018224445348.jpg",
+                "category_id": 38,
+                "market_price": 19800,
+                "promotion_price": 8800,
+                "wireless_price": 8800,
+                "sale_min_num": 1,
+                "item_status": 5,
+                "virtual_mark": 0,
+                "stock_status": 0,
+                "sale_commission": 0,
+                "delete_mark": 0,
+                "gmt_created": "2016-10-19 22:36:43",
+                "gmt_modified": "2016-10-20 11:45:44",
+                "item_desc": "<p>哈哈测试</p>",
+                "desc_tmpl_id": 0,
+                "higo_mark": 0,
+                "category_name": "唇部护理",
+                "create_time": "2016-10-19 22:36:43",
+                "status_name": "下架",
+                "biz_code": "hanshu",
+                "freight": 0,
+                "stock_num": 1,
+                "frozen_stock_num": 0,
+                "biz_tag": 0,
+                "sku_list": [
+                    {
+                        "id": 21839,
+                        "item_id": 3627,
+                        "sku_code": "",
+                        "stock_num": 0,
+                        "frozen_stock_num": 0,
+                        "promotion_price": 990,
+                        "market_price": 5900
+                    }
+                ]
+            }
+        ],
+        "total_count": 2
+    }
+}

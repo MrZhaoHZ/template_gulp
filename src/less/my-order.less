@@ -1,0 +1,303 @@
+@import "_func";
+@import "_reset";
+@import "_utils";
+@import "_var";
+body {
+    .body-setting();
+    background: #f5f5f5;
+}
+a {text-decoration: none;}
+a:link,a:visited{text-decoration: none; }
+// a:active,a:focus{background: #eee }
+nav {
+    position: fixed; 
+    top: 0; 
+    padding: 0 0.1rem;
+    z-index: 999;
+    width: 100%;
+    max-width: 750px;
+    height: 0.95rem;
+    line-height: 0.95rem;
+    font-size: 14px; 
+    background: #fff;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    } 
+    span {
+        padding:0.2rem 0.15rem;
+        width: 1.3rem;
+        text-align: center; 
+        box-sizing: border-box; 
+        color: #999;
+        &.active {
+            background: #fff; 
+            color: #66c300;
+            border-bottom: 2px solid #66c300;
+        }
+    }
+}
+
+.name-per {height: .7rem; font-size: .3rem; line-height: .7rem;border-top: 1px solid #eee; border-bottom: 1px solid #eee; background: #fff; position: relative;}
+.name {margin-left: .3rem; }
+ .per {margin-right: .8rem; float: right; color: #999;}
+ /*.toggle {position: absolute; right: .25rem; top: 0; background: url('../images/wechat/down1.png') no-repeat center; width: .3rem; height: .7rem; background-size: .3rem .17rem}*/
+ .toggle-active {position: absolute; right: .25rem; top: 0; background: url('../images/wechat/up1.png') no-repeat center; width: .3rem; height: .7rem; background-size: .3rem .17rem}   
+.scroller-container {
+    position: relative;
+    max-width: 750px;
+}
+.content {
+    margin-top: 0.95rem;
+    // font-size: .25rem; 
+    // background: #fff;
+    .order-list {
+        font-size: 16px;
+        .item {
+            margin: 0.2rem 0;
+            // padding: 0.2rem 0;
+            background: #fff;
+            .top-info {
+                position: relative;
+                padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+                .user-font {
+                    display: inline-block;
+                    width: 0.3rem;
+                    height: 0.3rem;
+                    line-height: 0.3rem;
+                    margin-right: 0.1rem;
+                    background: url(@user-font) 0 0 no-repeat;
+                    background-size: contain;
+                    // vertical-align: middle;
+                }
+                .user-name {
+                    // vertical-align: middle;
+                    display: inline-block;
+                    line-height: 0.3rem;
+                    font-size: 13px;
+                }
+                p{
+                    font-size: 12px;
+                    color: #999;
+                    padding: 3px 0;
+                }
+
+                .order-no,.order-time {
+                    display: inline-block;
+                    margin: 7px 0;
+                    color: #999999;
+                    font-size: 12px!important;
+                }
+                .send-info {
+                    position: absolute;
+                    right: 0.2rem;
+                    top: 0.2rem;
+
+                    span{
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .middle-info {
+                padding: 0.3rem 0.2rem;
+                // border: 1px solid #e8e8e8;
+                overflow-y: hidden;
+                background: #FAFAFA;
+                .goods {
+                    position: relative;
+                    img {
+                        float: left;
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        margin-right: 0.2rem;
+                    }
+                    .goods-name {
+                        padding-right: 0.1rem;
+                        width: 4rem;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 13px;
+                        padding-top: 3px;
+                    }
+                    .guige {
+                        margin: 10px 0;
+                        font-size: 12px;
+                        color: #999999;
+                    }
+                    .price {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        p{
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                        .num {
+                            margin: 10px 0 5px 5px;
+                            font-size: 12px;
+                            color: #999;
+                            text-align: right;
+                        }
+                    }
+                }
+                .no-goods {
+                    padding: 1.5rem 0;
+                    text-align: center;
+                    img {
+                        width: 1.95rem;
+                        height: 2.55rem;
+                    }
+                }
+            }
+            .bottom-info {
+                padding: 0.15rem 0.2rem;
+                overflow-y: hidden;
+                .total {
+                    line-height: 0.6rem;
+                }
+                .btn {
+                    float: right;
+                    span,a {
+                        display: inline-block;
+                        margin-left: 0.1rem;
+                        padding: 0.1rem 0.35rem;
+                        text-align: center;
+                        border-radius: 3px;
+                        font-size: 12px;
+                        &.cancel,&.express,&.nopass,&.nopass-cancel {
+                            border: 1px solid #999999;
+                            color: #4d4d4d;
+                        }
+                        &.detail,&.getgoods,&.pass,&.send,&.pass-cancel {
+                            color: #fff;
+                            background: #66c300;
+                            border: 1px solid #66c300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.details {margin: .13rem .3rem; display: none; }
+.details li {height: .5rem; line-height: .5rem; }
+.details li>i {color: #999;  font-style: normal; height: .5rem; line-height: .5rem;}
+.details li>span {color: #6eb92b; float: right;}
+
+.k-content {display: none;margin-top: .6rem;}
+.recent {font-size: .3rem; border-left: 3px solid #6eb92b; padding-left: .1rem; margin-top: .8rem; margin-left: .3rem; line-height: .3rem;}
+.k-point ul {padding: .1rem .3rem;}
+.k-point>ul>li {font-size: .24rem;  }
+.k-point>ul>li a {color: #000;}
+
+/*菜单样式*/
+.list{border-bottom:solid 1px #eee;margin:.14rem auto 0 auto; font-size: .3rem; }
+.list ul li{background-color:#fff; border:solid 1px #eee; border-bottom:0;}
+.list ul li a{padding-left: .3rem;color: #666; font-size:.3rem; display: block;  height:.7rem;line-height: .7rem;position: relative;
+}
+/*.list ul li .inactive{ background:url(../images/wechat/down1.png) no-repeat right;background-size: .3rem .16rem; background-position-x: 95%;}*/
+.list ul li .inactives{background:url(../images/wechat/up1.png) no-repeat right; background-size: .3rem .16rem; background-position-x: 95%;}
+.list ul li ul{display: none;}
+.list ul li ul li { border-left:0; border-right:0; background-color:#fff; border-color:#eee;}
+.list ul li ul li ul{display: none;}
+.list ul li ul li a{ padding-left:.6rem;}
+.list ul li ul li ul li { background-color:#fff; border-color:#eee; }
+.last{ background-color:#d6e6f1; border-color:#6196bb;}
+.list ul li ul li ul li a{ color:#666; padding-left:.9rem;}
+.top{
+    top: 0;
+}
+.footer{
+    bottom: 0;
+}
+.top,.footer{
+    position: fixed;
+    left: 0;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    width: 100%;
+    background-color: #0dcecb;
+    color: #fff;
+    z-index: 100;
+}
+#page1{
+    position: absolute;
+    // left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 750px;
+    // background-color: #fafafa;
+    z-index: 10;
+}
+#pullDown, #pullUp {
+    background:#fff;
+    height:40px;
+    line-height:40px;
+    padding:0 10px;
+    border-bottom:1px solid #ccc;
+    font-weight:bold;
+    font-size:14px;
+    color:#888;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+    display:block; float:left;
+    width:40px; height:40px;
+    background:url(../libs/iscroll/pull-icon@2x.png) 0 0 no-repeat;
+    -webkit-background-size:40px 80px;
+    background-size:40px 80px;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:250ms;
+}
+#pullDown .pullDownIcon {
+    -webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+    -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+    -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+    -webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+    background-position:0 100%;
+    -webkit-transform:rotate(0deg) translateZ(0);
+    -webkit-transition-duration:0ms;
+
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+}
+.nomore-data {
+    display: none;
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+    font-weight: 700;
+    font-size: 14px;
+    color: #888;
+}
+@-webkit-keyframes loading {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+// @import "layer-common.less";
+@import "search-layer.less";
+@import "nopass-layer.less";
+@import "cancel-layer.less";
+@import "center-home.less";

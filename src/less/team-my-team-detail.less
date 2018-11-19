@@ -1,0 +1,165 @@
+@import "_func";
+@import "_reset";
+@import "_utils";
+@import "_var";
+body {
+    .body-setting();
+    background: #F2F2F2;
+}
+a {text-decoration: none;}
+
+.head{
+    text-align: center;
+    font-size: 15px;
+    color: #292929;
+    position: relative;
+    overflow: hidden;
+    .back_img{
+        width: 100%;
+        float: left;
+    }
+    .head_box{
+        position: relative;
+        height: 1.85rem;
+        margin-top: 0.56rem;
+        .head_img{
+             width: 1.32rem;
+             border-radius: 0.66rem;
+             position: absolute;
+             top: 0;
+             left: 50%;
+             transform: translateX(-50%);
+
+            
+        }
+        .title{
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+        }
+    }
+}
+
+.num_box{
+    overflow: hidden;
+    font-size: 14px;
+    color: #222222;
+    background-color: white;
+    margin-top: 0.2rem;
+   
+    .per_line{
+        padding: 0.4rem;
+        overflow: hidden;
+        
+        .left{
+            float: left;
+        }
+        .right{
+            display: inline-block;
+            width: 70%;
+            text-align: right;
+            float: right;
+            line-height: 18px;
+            color: #4d4d4d;
+        }
+    }
+    .per_line_first{
+        border-bottom: 1px solid #e8e8e8;
+    }
+}
+
+.team{
+    margin-top: 0.2rem;
+    padding: 0.2rem;
+    padding-left: 0.4rem;
+    overflow: hidden;
+    background-color: white;
+    li{
+        padding: 0.26rem;
+        padding-left: 0;
+        overflow: hidden;
+        border-bottom: 1px solid #e8e8e8;
+        li{
+            padding-right: 0;
+        }
+        p{
+            overflow: hidden;
+            .left{
+                color: #222;
+                font-size: 14px;
+                float: left;
+            }
+            .num{
+                font-size: 11px;
+                display: inline-block;
+                padding: 4px 8px;
+                border: 4px;
+                background-color: #ff3333;
+                color: white;
+                border-radius: 10px;
+            }
+            .right{
+                float: right;
+                margin: 0 0.06rem;
+            }
+            .right_icon{
+                display: inline-block;
+                height: 23px;
+                width: 20px;
+                background-image: url(@team_right_icon);
+                background-position: center; 
+                background-repeat:no-repeat;
+                background-size: 13px 20px;
+                
+            }
+            .bottom_icon{
+                display: inline-block;
+                height: 13px;
+                width: 20px;
+                background-image: url(@team_bottom_icon);
+                background-position: center; 
+                background-repeat:no-repeat;
+                background-size: 23px 13px;
+                
+            }
+        }
+        
+    }
+    li:last-child
+    {
+        background:#ff0000;
+    }
+    .team{
+        margin-top: 0;
+        background-color: #fafff5;
+        padding-right: 0;
+    }
+    .hidde{
+        display: none;
+        overflow: hidden;
+    }
+}
+.sync, .home{
+    z-index: 22;
+    position: fixed;
+    right: 0.37rem;
+    width: 0.96rem;
+    height: 0.96rem;
+    border-radius: 0.48rem;
+    background-color: #7a7a7a;
+}
+.sync{
+    bottom: 2.07rem;
+    background-image: url(@team_sync);
+    background-position: center; 
+    background-repeat:no-repeat;
+    background-size: 0.47rem 0.48rem;
+}
+.home{
+    bottom: 0.83rem;
+    background-image: url(@team_home);
+    background-position: center; 
+    background-repeat:no-repeat;
+    background-size: 0.47rem 0.48rem;
+}

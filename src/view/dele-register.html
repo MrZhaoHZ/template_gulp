@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<link rel="icon" href="@static_path/favicon.ico">
+	<title>代理注册</title>
+	<link href="@static_path/libs/swiper/swiper.min.css" type="text/css" rel="stylesheet" />
+	<link href="@static_2_path/css/dele-register.css?v=@version" type="text/css" rel="stylesheet" />
+</head>
+<body class="Hd">
+<div class="container">
+	<div class="top-head">
+		<img class="user-pic" id="user-pic">
+		<span class="user-title">服务上级：<span id="superior_name"></span>(<span id="superior_level"></span>)</span>
+	</div>
+	<div class="err-warning" style="display: none;">
+		<div class="warning-left">
+			<span class="warning-img"></span>
+		</div>
+		<div class="warning-right">
+			<span class="warning-top">您的申请由于以下原因被驳回</span>
+			<span class="warning-bottom">原因：打款截图与授权金额不一致</span>
+		</div>
+	</div>
+	<div class="choose">
+		<p class="choose-title">请选择代理类型</p>
+		<div class="swiper-container">
+	        <div class="swiper-wrapper"></div>
+	    </div>
+	    <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="remark"></div>
+	</div>
+	<div class="next-div">
+		<div class="next" id="next">下一步</div>
+	</div>
+</div>
+<div class="enable">
+	<p class="enable_prompt"></p>
+</div>
+<div class="qr_code">
+	<img class="qr_code_img" id="qr_code_img" />
+	<p class="qr_code_prompt">长按图片识别二维码关注“一叶子微商服务号”后重新进入页面注册</p>
+</div>
+<script src="@static_path/libs/zepto/zepto.min.js"></script>
+<script src="@static_2_path/bundle/dele-register.js?v=@version"></script>
+<script src="@static_path/libs/swiper/swiper.min.js"></script>
+<script src="@static_path/libs/doT-master/doT.min.js" type="text/javascript"></script>
+<script src="@static_path/libs/layer-mobile/layer.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<link rel="icon" href="@static_path/favicon.ico">
+	<title>货款充值</title>
+	<link href="@static_2_path/css/goods-payment-recharge.css?v=@version" type="text/css" rel="stylesheet" />
+</head>
+<body class="Hd">
+<div class="container">
+	<div class="top-head">
+		<div class="top_left">
+			<span class="user-pic"></span>
+		</div>
+		<div class="top_right">
+			<p class="top_prompt">免责声明：此功能为辅助上级管理下级帐目，与公司财务未发生任何关系，我司对代理因充值产生的纠纷不负责任。</p>
+		</div>
+	</div>
+	<div class="current_payment">
+		<span>当前货款：</span>
+		<span></span>
+		<a href="goods-payment-detail.html?order_status=3">充值记录</a>
+	</div>
+	<div class="current_payment">
+		<span>金额：</span>
+		<input id="monery" type="text" placeholder="请输入您要充值的货款金额" />
+	</div>
+	<div class="next-div">
+		<div class="next">提交上级审核</div>
+	</div>
+	<div class="home-btn" id="home-btn"></div>
+</div>
+<script src="@static_path/libs/zepto/zepto.min.js"></script>
+<script src="@static_path/libs/layer-mobile/layer.js"></script>
+<script src="@static_2_path/bundle/goods-payment-recharge.js?v=@version"></script>
+
+</body>
+</html>

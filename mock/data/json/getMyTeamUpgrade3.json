@@ -1,0 +1,23 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "length": "100",
+    "data": [
+        {
+            "status": "待审核",
+            "time": "2012-12-12 -12-12-12",
+            "refuse": "打款截图与授权金额不一致",
+            "up_name": "吕晓创",
+            "up_old_level": "二级代理",
+            "up_new_level": "一级代理",
+            "old_name": "吕晓创",
+            "old_old_level": "二级代理",
+            "old_new_level": "一级代理",
+            "new_name": "吕晓创",
+            "new_old_level": "二级代理",
+            "new_new_level": "一级代理",
+            "money": "1000.00",
+            "money_pic": "http://www.qqju.com/pic/tx/tx18037.jpg"
+        }
+    ]
+}

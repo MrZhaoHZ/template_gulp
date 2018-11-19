@@ -1,0 +1,61 @@
+@import "_func";
+@import "_reset";
+@import "_utils";
+@import "_var";
+body {
+	.body-setting();
+}
+.container {
+	padding-top: 1.5rem;
+	text-align: center;
+	.user-pic {
+		width: 1.45rem;
+		height: 1.45rem;
+	}
+	.pwd-input {
+		margin: 0.9rem auto 0 auto;
+		padding-bottom: 0.3rem;
+		width: 5.4rem;
+		border-bottom: 1px solid #cccccc;
+		line-height: 0.5rem;
+		text-align: center;
+		.lock {
+			display: inline-block;
+			width: 0.28rem;
+			height: 0.32rem;
+			background-image: url(@password-input-lock);
+			background-size: cover;
+			vertical-align: middle;
+		}
+		input {
+			border: none;
+			vertical-align: middle;
+			padding: 0.02rem 0;
+			min-width: 50%;
+		}
+	}
+	.login {
+		margin: 1rem auto 0.4rem auto;
+		padding: 0.25rem 0;
+		width: 5.4rem;
+		background: #66c300;
+		font-size: 0.32rem;
+		color: #fff;
+		border-radius: 5px;
+		letter-spacing: 1px;
+	}
+	.login-method {
+		margin: 0 auto;
+		width: 5.4rem;
+		font-size: 0.26rem;
+		a {
+			color: #4d4d4d;
+		}
+		.handpattern {
+			float: left;
+		}
+		.forger-pwd {
+			float: right;
+		}
+	}
+}

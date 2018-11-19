@@ -1,0 +1,21 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "length": "100",
+    "data": [
+        {
+            "head_status": "待审核",
+            "new_name": "fjc",
+            "old_name": "发大水",
+            "next_level": "对对对",
+            "new_status": "待审核",
+            "old_status": "待审核",
+            "for": "市代",
+            "head_true": true,
+            "new_true": false,
+            "old_true": true,
+            "submit_true": true,
+            "time": "2016-04-22 12:36:58"
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<link rel="icon" href="//wxtest1.yyzws.com/favicon.ico">
+	<title>代理注册</title>
+	<link href="//wxtest1.yyzws.com/libs/larea/LArea.min.css" type="text/css" rel="stylesheet" />
+	<link href="//wxtest1.yyzws.com/css/dele-register-basic.css?v=1.6.3" type="text/css" rel="stylesheet" />
+</head>
+<body class="Hd">
+<div class="container">
+	<div class="top-head">
+		<img class="user-pic" src="" id="user-pic">
+		<p class="title-top"><span>服务上级：</span><span id="superior_name"></span>(<span id="superior_level"></span>)</p>
+		<p class="title-bottom"><span>申请等级：</span><span id="content-bottom"></span></p>
+	</div>
+	<form>
+		<div class="content" value="">
+			<p><span>姓&nbsp;名：</span><input placeholder="请输入真实姓名" maxlength="25" id="name" /></p>
+			<p><span>手机号：</span><input placeholder="请输入手机号" maxlength="11" id="phone" /></p>
+			<p><span>验证码：</span><input placeholder="请输入验证码" maxlength="6" id="check_num" /><span class="msgs">获取验证码</span></p>
+			<p><span>微信号：</span><input placeholder="请输入微信号" maxlength="15" id="we_chat" /></p>
+			<p><span>设置密码：</span><input type="password" maxlength="15" placeholder="请输入6-15位密码" id="pwd" /></p>
+			<p class="address_p" id="address_click"><span>收货地址：</span><textarea readonly onfocus="this.blur()"  class="address" id="demo2" type="text" placeholder="选择省市区" ></textarea><input id="value2" type="hidden" /></p>
+			<p class="address_p"><span>&nbsp;</span><textarea class="address" placeholder="请输入街道门牌信息" id="address" maxlength="20"></textarea></p>
+		</div>
+		<div class="up-load-id id_div" style="display: none;">
+			<p class="id_line"><span>身份证号：</span><input placeholder="请输入18位身份证号码" id="id" maxlength="18" /></p>
+			<div class="id-img">
+				<div class="id-left" id="upload-up">
+					<!-- <span class="img"></span>
+					<span class="img-status" id="img-status">点击上传</span> -->
+					<div class="img-container">
+						<img src="//wxtest1.yyzws.com/images/upload.png" alt="" style="width: 100%;height: 100%;">
+					</div>
+				</div>
+				<div class="id-right">
+					<span class="id-prompt" id="id-prompt">请上传身份证正面照</span>
+					<span class="id-prompt-content">图片大小不可超过3M</span>
+				</div>
+			</div>
+			<p class="reuploader" id="reuploader_id">重新上传</p>
+		</div>
+		<div class="up-load-id money_div"  style="display: none;">
+			<p class="money_line"><span>授权金额：</span><input placeholder="请输入授权打款金额" id="money" /></p>
+			<div class="id-img">
+				<div class="id-left" id="upload-down">
+					<!-- <span class="img"></span>
+					<span class="img-status">点击上传</span> -->
+					<div class="img-container">
+						<img src="//wxtest1.yyzws.com/images/upload.png" alt="" style="width: 100%;height: 100%;">
+					</div>
+				</div>
+				<div class="id-right payment_voucher">
+					<span class="id-prompt" id="img-prompt">请上传您向上级的打款截图</span>
+					<span class="id-prompt-content">图片大小不可超过3M</span>
+				</div>
+			</div>
+			<p class="reuploader" id="reuploader_voncher">重新上传</p>
+		</div>
+	</form>
+	<div class="next-div">
+		<div class="next" id="next">提交申请</div>
+	</div>
+</div>
+<!-- <script src="//wxtest1.yyzws.com/libs/zepto/zepto.min.js"></script> -->
+<script src="//wxtest1.yyzws.com/libs/jquery/jquery-1.10.2.js"></script>
+<script src="//wxtest1.yyzws.com/libs/larea/LArea.js"></script>
+<script src="//wxtest1.yyzws.com/libs/larea/LAreaData2.js"></script>
+<script src="//wxtest1.yyzws.com/libs/RSA/RSA.min.js"></script>
+<script src="//wxtest1.yyzws.com/libs/md5/md5.min.js"></script>
+<script src="//wxtest1.yyzws.com/libs/webuploader-0.1.5/webuploader.min.js"></script>
+<script src="//wxtest1.yyzws.com/libs/layer-mobile/layer.js"></script>
+<script src="//192.168.8.150:3000/bundle/dele-register-basic-test.js?v=1.0.09"></script>
+</body>
+</html>

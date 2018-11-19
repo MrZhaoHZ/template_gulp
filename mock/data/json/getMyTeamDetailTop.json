@@ -1,0 +1,16 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "length": "100",
+    "data": [
+        {
+            "name": "吕晓创",
+            "level": "合伙人",
+            "rem_num": "55",
+            "team_num": "55",
+            "phone": "15011423467",
+            "address": "浙江省 杭州市 下城区东新路1118号兰通财富中心",
+            "head_pic": "http://p3.wmpic.me/article/2017/02/09/1486620203_VAQQsfCN.jpg"
+        }
+    ]
+}

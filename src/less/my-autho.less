@@ -1,0 +1,44 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}.blk .key i,.submit .jine i{font-style:normal;font-weight:700}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}a,button,input,label,span{-webkit-tap-highlight-color:rgba(255,0,0,0)}*{box-sizing:border-box}img{max-width:100%}a{text-decoration:none}a:focus,input:focus,option,select,textarea{outline:0}input{-webkit-appearance:none}select{border:1px solid #000;appearance:none;-moz-appearance:none;-webkit-appearance:none;background:url(http://ourjs.github.io/static/2015/arrow.png) right center no-repeat;padding-right:14px}.address,.blk{padding:.2rem;overflow-y:hidden}select::-ms-expand{display:none}.search-wraper .search-history .searched-item-box a.searched-item{height:auto}.Hd{display:none}.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}* html .clearfix{height:1%}.clearfix{display:block}.none{display:none!important}.float-left{float:left!important}.float-right{float:right!important}.delay-animation{-webkit-transition-property:all;-webkit-transition-duration:.25s,.45s;-webkit-transition-timing-function:ease}
+body{max-width: 750px;margin: 0 auto;}
+a {text-decoration: none;}
+a:link,a:visited{text-decoration: none; }
+// a:active,a:focus{background: #eee }
+nav {
+    // position: fixed; 
+    // top: 0; 
+    padding: 0 10px;
+    z-index: 999;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px; 
+    background: #fff;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    } 
+    span {
+        // display: inline-block;
+        padding:10px 15px;
+        width: 130px;
+        text-align: center; 
+        box-sizing: border-box; 
+        color: #999;
+        &.active {
+            background: #fff; 
+            color: #66c300;
+            border-bottom: 1px solid #66c300;
+        }
+    }
+}
+
+.book-container {
+    position: relative;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+@import "search-layer.less";
+@import "center-home.less";

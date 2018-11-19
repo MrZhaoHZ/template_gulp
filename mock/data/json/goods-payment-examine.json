@@ -1,0 +1,43 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "length": "100",
+    "data": [
+        {
+            "user_id": "1",
+            "status": "待审核",
+            "user_time": "2016-12-12",
+            "user_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_name": "huxiaoyu",
+            "user_refuse": "货款金额与充值金额不一致",
+            "user_money": "100.00"
+        },
+        {
+            "user_id": "1",
+            "status": "待审核",
+            "user_time": "2016-12-12",
+            "user_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_name": "huxiaoyu",
+            "user_refuse": "货款金额与充值金额不一致",
+            "user_money": "100.00"
+        },
+       {
+            "user_id": "1",
+            "status": "待审核",
+            "user_time": "2016-12-12",
+            "user_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_name": "huxiaoyu",
+            "user_refuse": "货款金额与充值金额不一致",
+            "user_money": "100.00"
+        },
+        {
+            "user_id": "1",
+            "status": "待审核",
+            "user_time": "2016-12-12",
+            "user_pic": "http://www.qqju.com/pic/tx/tx18037.jpg",
+            "user_name": "huxiaoyu",
+            "user_refuse": "货款金额与充值金额不一致",
+            "user_money": "100.00"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+"sku_list": 
+    {
+        "storeId": 21628,
+        "itemSkuId": 422,
+        "supplierItmeSkuSn": 6600,
+
+        "stockNum": 21628,
+        "salesNum": 21628,
+        "frozenStockNum": 422,
+        "soldNum": 8800
+    }
+}

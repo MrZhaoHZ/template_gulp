@@ -1,0 +1,236 @@
+@import "_func";
+@import "_reset";
+@import "_utils";
+@import "_var";
+body {
+    .body-setting();
+    background: #F2F2F2;
+    font-size: 16px;
+}
+.address {
+	position: relative;
+	padding: 0.2rem;
+	background: #f5ffeb;
+	overflow-y: hidden;
+	.logo {
+		position: absolute;
+		float: left;
+		// position: relative;
+		top: 0.9rem;
+		left: 5%;
+		// display: inline-block;
+        width: 0.36rem;
+        height: 0.45rem;
+        line-height: 0.4rem;
+        margin-right: 0.1rem;
+        background: url(@address) 0 0 no-repeat;
+        background-size: contain;
+	}
+	.info {
+		position: relative;
+		left: 10%;
+		width: 90%;
+		span {
+			display: block;
+			margin: 0.15rem;
+			text-align: left;
+		}
+	}
+}
+.goods-price {
+	margin: 0.2rem 0;
+	padding:0.2rem;
+	background: #fff;
+	overflow-y: hidden;
+	.jine {
+		display: inline-block;
+		line-height: 0.6rem;
+		i {
+			color: #ff3333;
+			font-style: normal;
+			font-weight: bold;
+		}
+	}
+	a.add {
+		float: right;
+		padding: 0.15rem 0.3rem;
+		border-radius: 5px;
+		color: #fff;
+		background: #66c300;
+	}
+}
+.ctrl {
+	position: relative;
+	// padding: 0.2rem 0.2rem 0 0.2rem;
+	padding: 0.3rem 0.3rem;
+	background: #fff;
+    img {
+        float: left;
+        width: 1.4rem;
+        height: 1.4rem;
+        margin-right: 0.2rem;
+    }
+    .goods-name {
+        padding-right: 0.1rem;
+        width: 4rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .about p {
+    	margin: 0.1rem;
+    }
+    .guige {
+    	position: relative;
+        margin: 5px 0;
+        font-size: 14px;
+        .guigeleft {
+			color: #999999;
+        }
+    }
+    .price {
+        margin-top: 10px;
+        font-size: 14px;
+        span {
+        	font-size: 16px;
+        }
+    }
+    .btn-area {
+        position: absolute;
+        right: 0.25rem;
+        top: 5px;
+        .place-btn {
+            display: inline-block;
+            padding: 0.15rem 0.35rem;
+            text-align: center;
+            border-radius: 5px;
+            background: #66c300;
+            color: #fff;
+        }
+        .whole {
+        	border: 1px solid #e8e8e8;
+        	border-radius: 5px;
+        	span {
+        		padding: 10px;
+        		display: inline-block;
+        		text-align: center;
+        	}
+        	.minus,.add {
+				// padding: 10px 0 10px 0;
+        	}
+        	.value {
+        		// padding: 10px;
+        		border-left: 1px solid #e8e8e8;
+        		border-right: 1px solid #e8e8e8;
+        	}
+        	.gray {
+        		color: gray;
+        	}
+        }
+    }
+    .bottom {
+    	margin-top: 15px;
+    	padding: 5px 0;
+    	border-top: 1px solid #e8e8e8;
+    }
+}
+.descrip {
+	margin: 0.2rem 0;
+	padding: 0.2rem;
+	background: #fff;
+	p {
+		margin: 5px 0;
+	}
+}
+
+.submit {
+	position: fixed;
+    bottom: 0;
+    //left: 0;
+    width: 100%;
+    max-width: 750px;
+	margin: 0 0;
+	padding:0.2rem;
+	background: #fff;
+	overflow-y: hidden;
+	.jine {
+		display: inline-block;
+		line-height: 0.6rem;
+		i {
+			color: #ff3333;
+			font-style: normal;
+			font-weight: bold;
+		}
+	}
+	span.submit-btn {
+		float: right;
+		padding: 0.15rem 0.3rem;
+		border-radius: 5px;
+		color: #fff;
+		background: #66c300;
+
+		&.gray {
+			background: gray;
+		}
+	}
+}
+.attr_box{
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4px;
+        line-height: 30px;
+        padding: 4px 2px;
+    }
+    .attr_left{
+        float: left;
+        margin-right: 6px;
+    }
+    .attr_right{
+        float: left;
+        
+    }
+    .attr_right span{
+        padding: 2px 8px;
+        border: 1px solid #e8e8e8;
+        border-radius: 4px;
+        margin:  0 4px;
+    }
+    .spanActive{
+        color: #66c300;
+        border: 1px solid #66c300!important;
+    }
+.num_box{
+    overflow: hidden;
+    position: relative;
+    height: 45px;
+    width: 100%;
+}
+
+nav{
+   background-color: white;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e8e8e8;
+    span{
+        padding: .08rem .15rem;
+        width: 48%;
+        display: inline-block;
+        text-align: center;
+        color: #999;
+    }
+    .active{
+        background: #fff;
+        color: #66c300;
+        border: 0px;
+        border-bottom: 1px solid #66c300;
+    }
+} 
+.disClick{
+    background-color: #CCCCCC;
+}
+.sku_info{
+    background-color: #DDEBCE;
+    margin: 0.1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.3rem 0.2rem;
+    border-radius: 4px;
+}

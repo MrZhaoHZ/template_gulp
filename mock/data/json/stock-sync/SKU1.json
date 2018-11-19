@@ -1,0 +1,66 @@
+{
+    "code": 10000,
+    "msg": "请求处理成功",
+    "data": {
+        "data": [
+            {   
+                "sku_code":"fujichao",
+                "id": 8074,
+                "biz_code": "hanshu",
+                "supplier_id": 6,
+                "supplier_name": "广州衣酷服饰有限公司（皓顿）",
+                "store_id": 5,
+                "store_name": "广东二号仓",
+                "item_id": 3576,
+                "item_sku_id": 15068,
+                "seller_id": 1841254,
+                "supplier_itme_sku_sn": "ZDK14HEI110",
+                "item_name": "Haut Ton/皓顿男士时尚潮流韩版自动扣商务休闲皮带",
+                "icon_url": "",
+                "stock_num": 126,
+                "sales_num": 126,
+                "frozen_stock_num": 0,
+                "sold_num": 0,
+                "version": 0,
+                "timestamp": 0,
+                "level": 1,
+                "status": 1,
+                "type": 0,
+                "delete_version": 0,
+                "delete_mark": 0,
+                "gmt_created": "2016-06-02 11:36:19",
+                "gmt_modified": "2016-07-01 17:47:51"
+            },
+            {   
+                "sku_code":"fujichao",
+                "id": 8074,
+                "biz_code": "hanshu",
+                "supplier_id": 6,
+                "supplier_name": "广州衣酷服饰有限公司（皓顿）",
+                "store_id": 5,
+                "store_name": "广东二号仓",
+                "item_id": 3576,
+                "item_sku_id": 15068,
+                "seller_id": 1841254,
+                "supplier_itme_sku_sn": "ZDK14HEI110",
+                "item_name": "Haut Ton/皓顿男士时尚潮流韩版自动扣商务休闲皮带",
+                "icon_url": "",
+                "stock_num": 126,
+                "sales_num": 126,
+                "frozen_stock_num": 0,
+                "sold_num": 0,
+                "version": 0,
+                "timestamp": 0,
+                "level": 1,
+                "status": 1,
+                "type": 0,
+                "delete_version": 0,
+                "delete_mark": 0,
+                "gmt_created": "2016-06-02 11:36:19",
+                "gmt_modified": "2016-07-01 17:47:51"
+            }
+        ],
+        "total_count": 2
+    }
+}
+
